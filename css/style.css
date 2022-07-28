@@ -22,11 +22,12 @@ body {
 /*               Header                      */
 /* logo */
 .logo-link {
+  font-family: var(--logo-font);
   text-decoration: none;
 }
 
 .logo-text {
-  font-family: var(--file-font);
+  font-family: var(--logo-font);
   font-weight: 700;
   font-style: normal;
   font-size: 26px;
@@ -54,10 +55,8 @@ body {
 .list-link {
   text-decoration: none;
   font-family: inherit;
-  font-style: Medium;
   font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 2%;
+  line-height: 1.2;
   color: var(--primary-color);
 }
 
@@ -85,10 +84,10 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 0.9;
-  letter-spacing: 2%;
 }
 
 .contact-link {
+  text-decoration: none;
   color: var(--text-color);
   margin-left: 50px;
 }
@@ -101,11 +100,12 @@ body {
 
 .title {
   height: 120px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1, 36;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
-  font-size: 44px;
-  line-height: 0.7;
-  letter-spacing: 6%;
   padding-top: 200px;
   color: var(--background-lite);
 }
@@ -117,7 +117,11 @@ body {
 }
 
 .main-button {
+  font-family: var(--file-font);
   font-weight: 700;
+  font-size: 16px;
+  line-height: 1, 87;
+  letter-spacing: 0, 06em;
   width: 216px;
   height: 50px;
   border-radius: 4px;
@@ -137,7 +141,6 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 0.9;
-  letter-spacing: 3%;
 }
 
 .section-info {
@@ -151,12 +154,10 @@ body {
 .list-text {
   color: var(--text-color);
   font-weight: 400;
-  font-style: Regular;
   font-size: 14px;
   line-height: 1.8;
-  align-items: Left;
   vertical-align: Top;
-  letter-spacing: 3%;
+  letter-spacing: 0.03em;
 }
 
 /*                section image                          */
@@ -165,8 +166,10 @@ body {
 }
 
 .titles {
+  font-size: 36px;
+  line-height: 1.17;
+  /* letter-spacing: 0, 03em; */
   text-align: center;
-  height: 42px;
   color: var(--prime-text);
 }
 
@@ -228,18 +231,18 @@ footer {
 
 .footer-addres {
   color: var(--text-lite) 60%;
-  font-family: inherit;
-  font-weight: inherit;
+  font-family: var(--file-font);
+  font-weight: normal;
   font-style: normal;
   font-size: 14px;
-  line-height: 14/24;
+  line-height: 1.7;
   text-align: Left;
-  letter-spacing: 3%;
-  fill: solid;
+  letter-spacing: 0.03em;
   padding-top: 20px;
 }
 
 .footer-link {
+  text-decoration: none;
   color: var(--text-lite);
   opacity: 60%;
 }
@@ -284,13 +287,13 @@ a {
 
 .button-nav {
   cursor: pointer;
-  height: 38px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 0.65;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
   text-align: Center;
-  fill: solid;
+  /* fill: solid; */
   border-style: none;
   border-radius: 4px;
   margin: 8px;
