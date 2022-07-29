@@ -55,6 +55,7 @@ body {
 .list-link {
   text-decoration: none;
   font-family: inherit;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
   color: var(--primary-color);
@@ -102,7 +103,7 @@ body {
   height: 120px;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1, 36;
+  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
@@ -120,8 +121,8 @@ body {
   font-family: var(--file-font);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1, 87;
-  letter-spacing: 0, 06em;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
   width: 216px;
   height: 50px;
   border-radius: 4px;
@@ -140,7 +141,7 @@ body {
 .list-title {
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 0.9;
+  line-height: 1.14;
 }
 
 .section-info {
@@ -238,7 +239,6 @@ footer {
   line-height: 1.7;
   text-align: Left;
   letter-spacing: 0.03em;
-  padding-top: 20px;
 }
 
 .footer-link {
@@ -293,7 +293,6 @@ a {
   line-height: 1.6;
   letter-spacing: 0.03em;
   text-align: Center;
-  /* fill: solid; */
   border-style: none;
   border-radius: 4px;
   margin: 8px;
@@ -321,19 +320,15 @@ a {
 .card-title {
   font-family: inherit;
   font-size: 18px;
-  line-height: 0.5;
-  letter-spacing: 6%;
+  line-height: 1.8;
   margin-left: 24px;
   color: #212121;
 }
 .card-text {
   font-family: inherit;
   font-size: 16px;
-  line-height: 0.55;
-  letter-spacing: 3%;
+  line-height: 1.8;
   margin-left: 24px;
-  margin-bottom: 8px;
-  padding-bottom: 20px;
   color: #757575;
 }
 .color {
