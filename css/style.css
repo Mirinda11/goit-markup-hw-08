@@ -14,6 +14,8 @@
   --biger-size: 16px;
   --min-spacing: 0.03em;
   --line-little: 1.17;
+  --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 h1,
@@ -48,12 +50,19 @@ body {
 }
 
 .container {
-  width: auto;
+  width: 1200px;
   height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
+
 /*               Header                      */
 /* logo */
 
@@ -65,8 +74,6 @@ body {
   align-items: center;
   gap: 50px;
   background-color: var(--text-lite);
-  margin-left: 215px;
-  margin-right: 215px;
 }
 
 .logo-text {
@@ -86,7 +93,6 @@ body {
 /* nav */
 
 .nav {
-  /* font-family: inherit; */
   flex-basis: calc(100% / 3);
 }
 
@@ -101,7 +107,6 @@ body {
   line-height: 1.2;
   color: var(--primary-color);
   margin-right: 50px;
-  /* margin-left: 50px; */
 }
 
 .list > .logo {
@@ -167,20 +172,9 @@ body {
 
 .section-item {
   display: flex;
-
-  min-height: 98px;
+  justify-content: space-around;
   background-color: var(--background-lite);
   padding-top: 94px;
-  margin-left: 215px;
-  margin-right: 215px;
-}
-
-/* .sectoin-list:first-of-type {
-  padding-left: 215px;
-} */
-
-.section-item > .sectoin-list {
-  flex-basis: calc(100% / 1);
 }
 
 .list-title {
@@ -191,7 +185,6 @@ body {
 }
 
 .section-info {
-  min-height: 286px;
   background-color: var(--background-lite);
 }
 
@@ -207,6 +200,7 @@ body {
 .section-image {
   background-color: var(--background-lite);
 }
+
 .images {
   background-color: var(--background-lite);
 }
@@ -215,7 +209,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding-bottom: 94px;
 }
 
 .titles {
@@ -230,7 +223,6 @@ body {
 /*                section team                             */
 
 .team {
-  /* height: auto; */
   background-color: var(--backgraund-grey);
   padding-top: 100px;
   border: #f5f4fa 3px solid;
@@ -280,34 +272,43 @@ body {
 
 .team-card {
   margin-right: 30px;
-  border-radius: 4px;
+  margin-bottom: 94px;
+  border-radius: 0px 0px 4px 4px;
   background-color: var(--text-lite);
-  box-shadow: 0px 2px 1px 0px #00000033;
-  box-shadow: 0px 1px 1px 0px #00000024;
-  box-shadow: 0px 1px 3px 0px #0000001f;
+  box-shadow: var(--team-shadow);
 }
 
 /*                        footer                                     */
 
-footer {
-  height: 252px;
+.footer-section {
   background-color: var(--background-text-dark);
-  color: var(--text-lite);
-  padding-top: 60px;
 }
 
 .footer-info {
-  margin-left: 215px;
+  color: var(--text-lite);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.footer-addres {
+.logo-color {
+  color: var(--text-lite);
+}
+
+.address-list {
+  padding-top: 9px;
+}
+
+.address-item {
+  padding-top: 20px;
+}
+
+.footer-address {
   color: var(--text-lite) 60%;
   font-family: var(--file-font);
   font-weight: normal;
   font-style: normal;
   font-size: var(--size-repeat);
   line-height: 1.7;
-  text-align: Left;
   letter-spacing: 0.03em;
 }
 
@@ -325,6 +326,23 @@ a {
 }
 
 /*                        page2 portfolio                             */
+main {
+  border: #ececec 1px solid;
+  background-color: var(--background-lite);
+}
+
+.button-section {
+  margin-top: 100px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button-list {
+  margin-right: 8px;
+}
 
 .title-non {
   display: inline-block;
@@ -352,15 +370,22 @@ a {
   text-align: Center;
   border-style: none;
   border-radius: 4px;
+  padding: 6px 22px 6px 22px;
 }
 
 /*                     cards                    */
+
 .card-list > .card {
   border: 1px solid #eeeeee;
-  flex-basis: calc(100% / 4);
+}
+
+.main-cards {
+  display: flex;
+  padding-top: 50px;
 }
 
 .card {
+  width: 370px;
   gap: 30px;
 }
 
@@ -368,24 +393,24 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-
-  background-color: #ffffff;
 }
 
 .card-title {
   font-family: inherit;
   font-size: 18px;
   line-height: 1.71;
-  margin-left: 24px;
-  color: #212121;
+  color: var(--prime-text);
+  background-color: var(--text-lite);
+  padding-left: 24px;
+  padding-top: 20px;
+  padding-bottom: 4px;
 }
 .card-text {
   font-family: inherit;
   font-size: var(--biger-size);
   line-height: 1.71;
-  margin-left: 24px;
-  color: #757575;
-}
-.color {
-  color: #008000;
+  color: var(--text-color);
+  background-color: var(--text-lite);
+  padding-left: 24px;
+  padding-bottom: 20px;
 }
