@@ -132,6 +132,10 @@ body {
 
 /*                  mine                   */
 
+.hero {
+  background-color: var(--background-text-dark);
+}
+
 .title {
   font-weight: 900;
   font-size: 44px;
@@ -148,7 +152,7 @@ body {
   align-content: center;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  /* height: 600px; */
   text-align: center;
   background-color: var(--text-dark);
 }
@@ -172,7 +176,10 @@ body {
 .section-item {
   display: flex;
   justify-content: space-around;
-  background-color: var(--background-lite);
+}
+
+.only-top {
+  padding-top: 94px;
 }
 
 .list-title {
@@ -180,10 +187,6 @@ body {
   font-size: var(--size-repeat);
   line-height: var(--line-little);
   padding-bottom: 10px;
-}
-
-.section-info {
-  background-color: var(--background-lite);
 }
 
 .list-text {
@@ -194,14 +197,6 @@ body {
 }
 
 /*                section image                          */
-
-.section-image {
-  background-color: var(--background-lite);
-}
-
-.images {
-  background-color: var(--background-lite);
-}
 
 .image-item {
   display: flex;
@@ -220,12 +215,7 @@ body {
 
 /*                section team                             */
 
-.team {
-  background-color: var(--backgraund-grey);
-  border: #f5f4fa 3px solid;
-}
-
-.section-team {
+.team-color {
   background-color: var(--backgraund-grey);
 }
 
@@ -266,7 +256,6 @@ body {
 }
 
 .team-card {
-  margin-bottom: 94px;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--text-lite);
   box-shadow: var(--team-shadow);
