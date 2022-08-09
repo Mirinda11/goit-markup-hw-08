@@ -53,7 +53,6 @@ body {
   width: 1200px;
   height: auto;
   padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -70,7 +69,6 @@ body {
   height: 80px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   gap: 50px;
   background-color: var(--text-lite);
@@ -94,6 +92,7 @@ body {
 
 .nav {
   flex-basis: calc(100% / 3);
+  margin-left: 93px;
 }
 
 .nav-list {
@@ -119,6 +118,7 @@ body {
   font-weight: 500;
   font-size: var(--size-repeat);
   line-height: var(--line-little);
+  margin-left: auto;
 }
 
 .contact-link {
@@ -138,7 +138,6 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  text-align: center;
   color: var(--background-lite);
 }
 
@@ -174,7 +173,6 @@ body {
   display: flex;
   justify-content: space-around;
   background-color: var(--background-lite);
-  padding-top: 94px;
 }
 
 .list-title {
@@ -224,7 +222,6 @@ body {
 
 .team {
   background-color: var(--backgraund-grey);
-  padding-top: 100px;
   border: #f5f4fa 3px solid;
 }
 
@@ -244,18 +241,12 @@ body {
 .team-list {
   display: flex;
   justify-content: center;
+  gap: 30px;
   background-color: var(--backgraund-grey);
 }
-
-.team-list > .team-card {
-  flex-basis: calc(100% / 8);
-  background-color: var(--backgraund-grey);
-}
-
 .team-workers {
   width: 270px;
   background-color: var(--text-lite);
-  padding-top: 30px;
   padding-bottom: 10px;
 }
 
@@ -267,11 +258,14 @@ body {
   background-color: var(--text-lite);
   text-align: center;
   color: var(--text-color);
+}
+
+.team-info {
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .team-card {
-  margin-right: 30px;
   margin-bottom: 94px;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--text-lite);
@@ -280,14 +274,14 @@ body {
 
 /*                        footer                                     */
 
-.footer-section {
+footer {
   background-color: var(--background-text-dark);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-info {
   color: var(--text-lite);
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .logo-color {
@@ -326,13 +320,8 @@ a {
 }
 
 /*                        page2 portfolio                             */
-main {
+header {
   border: #ececec 1px solid;
-  background-color: var(--background-lite);
-}
-
-.button-section {
-  margin-top: 100px;
 }
 
 .buttons {
@@ -381,7 +370,7 @@ main {
 
 .main-cards {
   display: flex;
-  padding-top: 50px;
+  margin-top: 50px;
 }
 
 .card {
@@ -399,18 +388,20 @@ main {
   font-family: inherit;
   font-size: 18px;
   line-height: 1.71;
+  letter-spacing: 0.06em;
   color: var(--prime-text);
   background-color: var(--text-lite);
-  padding-left: 24px;
-  padding-top: 20px;
-  padding-bottom: 4px;
 }
 .card-text {
   font-family: inherit;
   font-size: var(--biger-size);
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: var(--text-color);
   background-color: var(--text-lite);
-  padding-left: 24px;
-  padding-bottom: 20px;
+  margin-top: 4px;
+}
+
+.card-info {
+  padding: 20px 24px 20px 24px;
 }
