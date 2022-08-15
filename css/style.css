@@ -70,7 +70,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 50px;
   background-color: var(--text-lite);
 }
 
@@ -106,6 +105,11 @@ body {
   line-height: 1.2;
   color: var(--primary-color);
   margin-right: 50px;
+}
+
+.list-link:hover,
+.list-link:focus {
+  color: var(--logo-color);
 }
 
 .list > .logo {
@@ -170,7 +174,7 @@ body {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(./images/ImgHero.png);
+    url(../images/ImgHero.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -197,42 +201,20 @@ body {
   justify-content: space-between;
 }
 
-.sectoin-list {
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
+  height: 120px;
   background-color: var(--backgraund-grey);
   border-radius: 4%;
 }
 
-.img-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.img-clock::before {
-  background-image: url(/images/clock.svg);
-}
-
-.img-comp::before {
-  background-image: url(/images/diagram.svg);
-}
-
-.img-astronaut::before {
-  background-image: url(/images/astronaut.svg);
-}
-
-.sectoin-list::before {
+.about-img ::before {
   content: "";
-  color: #000000;
-  display: block;
-  height: 70px;
-
-  background-repeat: no-repeat;
-  align-items: center;
-  background-position: center;
-  background-size: contain;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 270px;
+  border-radius: 4%;
 }
 
 .only-top {
@@ -256,7 +238,7 @@ body {
   font-size: var(--size-repeat);
   line-height: 1.71;
   letter-spacing: var(--min-spacing);
-  height: 72px;
+  width: 270px;
 }
 
 /*                section image                          */
@@ -341,7 +323,8 @@ body {
   fill: #afb1b8;
 }
 
-.team-soc:hover {
+.team-soc:hover,
+.team-soc:focus {
   fill: #ffffff;
   background-color: var(--logo-color);
   border-radius: 50%;
@@ -360,19 +343,32 @@ body {
 
 .client-item {
   display: flex;
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
+}
+
+.icon-link {
+  display: flex;
   background-size: contain;
   justify-content: center;
   align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+.icons {
   fill: #afb1b8;
 }
 
-.client-item:hover {
+.icons:hover,
+.icons:focus {
   fill: #2196f3;
-  border: 1px solid #2196f3;
 }
 
 /*                        footer                                     */
@@ -459,7 +455,8 @@ a {
   fill: #ffffff;
 }
 
-.footer-soc:hover {
+.footer-soc:hover,
+.footer-soc:focus {
   fill: #ffffff;
   background-color: var(--logo-color);
   border-radius: 50%;
@@ -475,7 +472,7 @@ a {
 
 /*                        page2 portfolio                             */
 header {
-  border: #ececec 1px solid;
+  border-bottom: #ececec 1px solid;
 }
 
 .buttons {
@@ -507,7 +504,8 @@ header {
   border-radius: 4px;
   padding: 6px 22px 6px 22px;
 }
-.button-nav:hover {
+.button-nav:hover,
+.button-nav:focus {
   background-color: var(--logo-color);
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -522,7 +520,8 @@ header {
   gap: 30px;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
