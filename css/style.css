@@ -211,7 +211,23 @@ body {
   border-radius: 4%;
 }
 
-.about-img ::before {
+.img-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.img-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.img-comp::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.img-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
+.sectoin-list::before {
   content: "";
   width: 270px;
   border-radius: 4%;
