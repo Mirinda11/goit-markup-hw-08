@@ -156,10 +156,6 @@ body {
   color: var(--logo-color);
 }
 
-/* .list-link > .logo {
-  color: var(--logo-color);
-} */
-
 /* contact */
 
 .contacts {
@@ -167,7 +163,6 @@ body {
   font-weight: 500;
   font-size: var(--size-repeat);
   line-height: var(--line-little);
-  /* margin-left: auto; */
 }
 
 .contact-link {
