@@ -126,7 +126,7 @@ body {
   transition: background-color var(--time) var(--timing-function);
 }
 
-.list-link::before {
+.list-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -141,12 +141,12 @@ body {
   transition: opasity var(--time) var(--timing-function);
 }
 
-.logo::before {
+.logo::after {
   content: "";
   opacity: 1;
 }
 
-.list-link:hover::before {
+.list-link:hover::after {
   content: "";
   opacity: 1;
 }
@@ -156,10 +156,6 @@ body {
   color: var(--logo-color);
 }
 
-/* .list-link > .logo {
-  color: var(--logo-color);
-} */
-
 /* contact */
 
 .contacts {
@@ -167,7 +163,6 @@ body {
   font-weight: 500;
   font-size: var(--size-repeat);
   line-height: var(--line-little);
-  /* margin-left: auto; */
 }
 
 .contact-link {
