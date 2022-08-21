@@ -28,7 +28,6 @@
           <span class="logo-text " lang="en">Studio</span>
         </a>
         <nav class="nav ">
-          <div>
             <ul class="nav-list">
               <li class="list">
                 <a class="list-link logo" href="./index.html">Студiя</a>
@@ -40,7 +39,6 @@
                 <a class="list-link" href="./3.html">Контакти</a>
               </li>
             </ul>
-          </div>
         </nav>
         <div class="contacts">
           <a class="contact-link" href="mailto:info@devstudio.com">
@@ -67,7 +65,17 @@
             Ефективні рішення для<br />
             вашого бізнесу
           </h1>
-          <button class="main-button" type="button">Замовити послугу</button>
+          <!-- modal  -->
+          <button class="main-button" type="button" data-modal-open>Замовити послугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="close-button" data-modal-close type="button">
+                <svg class="icon-close">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -137,6 +145,11 @@
             <ul class="image-item">
               <li class="image-list">
                 <img src="./images/box1.jpg" alt="рабочий стол" width="370" />
+                <div class="images-text">
+                  <p class="title-position">
+                    Десктопні додатки
+                  </p>
+                </div>
               </li>
               <li class="image-list">
                 <img
@@ -144,9 +157,19 @@
                   alt="процесс программирования"
                   width="370"
                 />
+                <div class="images-text">
+                  <p class="title-text">
+                    Мобільні додатки
+                  </p>
+                </div>
               </li>
               <li class="image-list">
                 <img src="./images/box3.jpg" alt="дизайн" width="370" />
+                <div class="images-text">
+                  <p class="title-text">
+                    Дизайнерські рішення
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
@@ -438,5 +461,6 @@
         </div>
       </div>
     </footer>
+    <script src="./modal.js"></script>
   </body>
 </html>
