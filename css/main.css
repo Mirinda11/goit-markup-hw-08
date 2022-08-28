@@ -230,6 +230,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--background-lite);
+  margin-bottom: 30px;
 }
 
 .main-titl {
@@ -259,7 +260,8 @@ body {
   border-style: none;
   background-color: var(--logo-color);
   color: var(--text-lite);
-  margin-top: 30px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* modal */
@@ -319,6 +321,12 @@ body {
   cursor: pointer;
 }
 
+.close-button:hover,
+.close-button:focus {
+  fill: var(--logo-color);
+  border: 1px solid #2196f3;
+}
+
 .icon-close {
   width: 11px;
   height: 11px;
@@ -338,8 +346,9 @@ body {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  color: rgba(117, 117, 117, 0.5);
   border-radius: 4px;
-  padding: 16px 12px;
+  padding: 16px 42px;
   resize: none;
   cursor: pointer;
 }
@@ -356,6 +365,7 @@ body {
 .coment {
   height: 120px;
   margin-bottom: 20px;
+  padding-left: 16px;
 }
 
 .coment::-webkit-input-placeholder {
@@ -908,45 +918,44 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: var(--background-text-dark);
+  color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
   outline: none;
+  padding-left: 16px;
   -webkit-transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-form::-webkit-input-placeholder {
   padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .mail-form::-moz-placeholder {
   padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .mail-form:-ms-input-placeholder {
   padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .mail-form::-ms-input-placeholder {
   padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .mail-form::placeholder {
   padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .mail-form:focus {
   border-color: var(--logo-color);
 }
 
-.mail-button {
-  width: 200px;
-  height: 50px;
-  background-color: var(--logo-color);
-  color: var(--text-lite);
-  border: none;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+.footer-button {
   padding-right: 30px;
   margin-left: 12px;
 }
