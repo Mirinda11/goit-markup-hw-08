@@ -1,0 +1,113 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+a,
+input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+body {
+  font-family: var(--file-font);
+  color: var(--prime-text);
+}
+
+%container {
+  width: 1200px;
+  height: auto;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+%logo{
+  color: var(--logo-color);
+}
+
+%mail {
+  margin-right: 30px;
+}
+
+%flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%image-notification{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  }
+
+%margin-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%background-lite {
+  background-color: var(--text-lite);
+}
+
+%titles {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: var(--line-little);
+  letter-spacing: var(--min-spacing);
+  text-align: center;
+  color: var(--prime-text);
+  margin-bottom: 50px;
+}
+
+%topography{
+  font-size: var(--size-repeat);
+  line-height: var(--line-little);
+  letter-spacing: var(--min-spacing);
+}
+
+%title-non {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+%only-top{
+  margin-top: 94px;
+}
+
+%only-bottom{
+  margin-bottom: 94px;
+}
+
+%zero{
+  margin:0;
+}

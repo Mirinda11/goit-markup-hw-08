@@ -1,0 +1,235 @@
+.hero {
+  background-color: var(--background-text-dark);
+  text-align: center;
+}
+
+.hero_img {
+  max-width: 1600px;
+  height: 600px;
+  @extend %margin-auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/ImgHero.png);
+  @extend %image-notification;
+}
+
+.hero_title {
+  padding-top: 200px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--background-lite);
+  margin-bottom: 30px;
+}
+
+.hero_button {
+  font-weight: 700;
+  font-size: var(--biger-size);
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  width: 216px;
+  height: 50px;
+  border-radius: 4px;
+  border-style: none;
+  background-color: var(--logo-color);
+  color: var(--text-lite);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--time) var(--timing-function);
+
+  &.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: visible;
+  transition: opacity var(--time) var(--timing-function);
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background: var(--text-lite);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+}
+
+.modal_close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(84, 84, 84, 0.256);
+  border-radius: 50%;
+  cursor: pointer;
+  @extend %flex;
+
+  &:hover,
+  &:focus {
+  fill: var(--logo-color);
+  border: 1px solid var(--logo-color);
+  }
+}
+
+.modal_close-icon {
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+}
+
+.modal_title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: var(--line-little);
+  letter-spacing: var(--min-spacing);
+  color: var(--prime-text);
+  margin-bottom: 12px;
+}
+
+.modal_input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  color: rgba(117, 117, 117, 0.5);
+  border-radius: 4px;
+  padding: 16px 42px;
+  resize: none;
+  cursor: pointer;
+
+  &:focus {
+  outline-color: var(--logo-color);
+  cursor: pointer;
+  }
+}
+
+.modal_input:focus + .icon-input {
+  fill: var(--logo-color);
+}
+
+.comments {
+  height: 120px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+
+  &::placeholder,
+  & textarea {
+  font-size: 12px;
+  line-height: var(--line-little);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  overflow: none;
+  resize: none;
+  }
+}
+
+.modal_wrap {
+  position: relative;
+}
+
+.modal_icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.modal_label {
+  display: block;
+  font-size: 12px;
+  line-height: var(--line-little);
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.modal_accept {
+  width: 100%;
+  color: var(--text-color);
+  font-size: var(--size-repeat);
+  line-height: 1.7;
+  letter-spacing: var(--min-spacing);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+
+  & a {
+  color: var(--logo-color);
+  text-decoration: underline;
+  }
+
+    &::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 3px solid var(--prime-text);
+    border-radius: 3px;
+    display: block;
+    transition: background-color var(--time) var(--timing-function);
+    }
+}
+
+.modal_check-input:checked:checked + .modal_accept::before {
+  background-color: var(--logo-color);
+  background-image: url(../images/icon-check.svg);
+  border: none;
+  background-repeat: repeat;
+  background-position: center;
+
+  .check-input:focus + .modal_accept::before {
+  border-color: var(--logo-color);
+  cursor: pointer;
+  }
+}
+
+.modal_button {
+  height: 50px;
+  width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  background-color: var(--logo-color);
+  color: var(--text-lite);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}

@@ -1,0 +1,132 @@
+footer {
+  display: flex;
+  background-color: var(--background-text-dark);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer{
+  display: flex;
+  align-items: baseline;
+  @extend %container;
+}
+
+.footer_info {
+  color: var(--text-lite);
+}
+
+.logo_text{
+  @extend %logo;
+}
+
+.logo-color {
+  color: var(--text-lite);
+}
+
+.footer_address {
+  color: var(--text-lite) 60%;
+  font-family: var(--file-font);
+  font-weight: normal;
+  font-style: normal;
+  font-size: var(--size-repeat);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.address-list {
+  padding-top: 20px;
+}
+
+.footer_link {
+  color: var(--text-lite);
+  opacity: 60%;
+
+  a {
+  color: var(--text-lite);
+  }
+}
+
+.footer_social {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  background-color: var(--background-text-dark);
+  margin-left: 72px;
+  margin-right: 95px;
+}
+
+.footer_title {
+  text-transform: uppercase;
+  color: var(--text-lite);
+  font-weight: 700;
+  font-size: var(--size-repeat);
+  line-height: var(--line-little);
+  letter-spacing: var(--min-spacing);
+}
+
+.footer_social-list {
+  display: flex;
+
+}
+
+.footer_social-item{
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.footer-soc {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--text-lite);
+
+  &:hover,
+  &:focus {
+  fill: var(--text-lite);
+  background-color: var(--logo-color);
+  border-radius: 50%;
+  }
+}
+
+// social
+
+.register {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .register_wrap {
+  margin-top: 20px;
+  }
+}
+
+.register_form {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--background-text-dark);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  outline: none;
+  padding-left: 16px;
+  transition: outline-color var(--time) var(--timing-function);
+
+  &::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.register_form:focus {
+  border-color: var(--logo-color);
+}
+
+.register_button {
+  padding-right: 30px;
+  margin-left: 12px;
+}
+
+.register_icon {
+  position: absolute;
+  top: 48px;
+  right: 28px;
+}
