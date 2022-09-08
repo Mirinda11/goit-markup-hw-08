@@ -2,13 +2,14 @@
   padding-top: 94px;
 }
 
-.about_list {
+.about__list {
   @extend %container;
   display: flex;
   justify-content: space-between;
+  padding-right: 15px;
 }
 
-.about_img {
+.about__img {
   @extend %flex;
   width: 270px;
   height: 120px;
@@ -22,7 +23,7 @@
 }
 }
 
-.about_title {
+.about__title {
   text-transform: uppercase;
   font-size: var(--size-repeat);
   line-height: var(--line-little);
@@ -31,7 +32,7 @@
   @extend %background-lite;
 }
 
-.about_text {
+.about__text {
   color: var(--text-color);
   font-size: var(--size-repeat);
   line-height: 1.71;
@@ -42,7 +43,7 @@
 
 /*                section image                          */
 
-.work_image{
+.work__image{
   @extend %container;
   @extend %section;
 }
@@ -51,17 +52,17 @@
   @extend %titles;
 }
 
-.work_list {
+.work__list {
   display: flex;
   justify-content: center;
   gap: 30px;
 
-  .work_item {
+  .work__item {
   position: relative;
   }
 }
 
-.work_wrap {
+.work__wrap {
   position: absolute;
   bottom: 0;
   opacity: 1;
@@ -73,7 +74,7 @@
   font-weight: 700;
   @extend %topography;
 
-  .work_text {
+  .work__text {
   height: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -92,25 +93,25 @@
   @extend %section;
 }
 
-.team_list {
+.team__list {
   display: flex;
   justify-content: center;
   gap: 30px;
   background-color: var(--backgraund-grey);
 
-  .team_item {
+  .team__item {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--text-lite);
   box-shadow: var(--team-shadow);
   }
 }
 
-.team_card {
+.team__card {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.team_info {
+.team__info {
   width: 270px;
   background-color: var(--text-lite);
   padding-bottom: 10px;
@@ -122,7 +123,7 @@
   color: var(--prime-text);
 }
 
-.team_text {
+.team__text {
   width: 270px;
   font-size: var(--biger-size);
   line-height: var(--line-little);
@@ -132,14 +133,14 @@
   color: var(--text-color);
 }
 
-.social_list {
+.social__list {
   display: flex;
   margin-top: 16px;
   margin-left: 32px;
   gap: 10px;
 }
 
-.social_link {
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,16 +167,16 @@
   flex-direction: column;
 }
 
-.client_list {
+.client__list {
   display: flex;
   gap: 30px;
 
-  .client-_item {
+  .client__item {
   display: flex;
   }
 }
 
-.client_link {
+.client__link {
   display: flex;
   background-size: contain;
   justify-content: center;

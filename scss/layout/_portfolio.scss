@@ -2,12 +2,12 @@ header {
   border-bottom: #ececec 1px solid;
 }
 
-.nav_btn{
+.nav__btn{
   @extend %only-top;
   @extend %container;
 }
 
-.nav_list {
+.nav__list {
   display: flex;
   justify-content: center;
 }
@@ -16,19 +16,19 @@ header {
   @extend %title-non;
 }
 
-.nav_item {
+.nav__item {
   margin-right: 8px;
   border-radius: 4px;
 }
 
-.nav_item > .logo {
+.nav__item > .logo {
   background-color: var(--logo-color);
   color: var(--text-lite);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.nav_button{
+.nav__button{
   font-weight: 500;
   font-size: var(--biger-size);
   line-height: 1.6;
@@ -60,14 +60,14 @@ header {
   margin-top: 50px;
 }
 
-.portfolio_list {
+.portfolio__list {
   @extend %only-bottom;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.portfolio_item {
+.portfolio__item {
   border: 1px solid #eeeeee;
   width: 370px;
   gap: 30px;
@@ -84,14 +84,14 @@ header {
 
 /* overlay */
 
-.portfolio_link {
+.portfolio__link {
   position: relative;
   overflow: hidden;
   display: block;
   transition: var(--time) var(--timing-function);
 }
 
-.overlay_text {
+.overlay__text {
   color: var(--text-lite);
   background-color: var(--logo-color);
   font-size: 18px;
@@ -99,19 +99,19 @@ header {
   letter-spacing: var(--line-little);
 }
 
-.portfolio_item:hover .portfolio-link::before {
+.portfolio__item:hover .portfolio__link::before {
   content: "";
   transform: translateY(-100%);
   transition: transform var(--time) var(--timing-function);
 }
 
-.portfolio_item:hover .overlay_wrap {
+.portfolio__item:hover .overlay__wrap {
   opacity: 0.9;
   transform: translateY(-100%);
   transition: transform var(--time) var(--timing-function);
 }
 
-.overlay_wrap {
+.overlay__wrap {
   position: absolute;
   top: 100%;
   left: 0;
@@ -129,7 +129,7 @@ header {
   }
 }
 
-.card_title {
+.card__title {
   font-family: inherit;
   font-size: 18px;
   line-height: 1.71;
@@ -138,7 +138,7 @@ header {
   background-color: var(--text-lite);
 }
 
-.card_text {
+.card__text {
   font-family: inherit;
   font-size: var(--biger-size);
   line-height: 1.71;
@@ -148,7 +148,7 @@ header {
   margin-top: 4px;
 }
 
-.card_info {
+.card__info {
   padding: 20px 24px 20px 24px;
   opacity: 1;
 }

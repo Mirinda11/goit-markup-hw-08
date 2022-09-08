@@ -11,11 +11,11 @@ footer {
   @extend %container;
 }
 
-.footer_info {
+.footer__info {
   color: var(--text-lite);
 }
 
-.logo_text{
+.logo__text{
   @extend %logo;
 }
 
@@ -23,7 +23,7 @@ footer {
   color: var(--text-lite);
 }
 
-.footer_address {
+.footer__address {
   color: var(--text-lite) 60%;
   font-family: var(--file-font);
   font-weight: normal;
@@ -37,26 +37,31 @@ footer {
   padding-top: 20px;
 }
 
-.footer_link {
+.footer__item{
+  margin-bottom: 9px;
+}
+
+.footer__link {
   color: var(--text-lite);
   opacity: 60%;
+  margin-bottom: 9px;
 
   a {
   color: var(--text-lite);
   }
 }
 
-.footer_social {
+.footer__social {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
   background-color: var(--background-text-dark);
-  margin-left: 72px;
-  margin-right: 95px;
+  margin-left: 66px;
+  margin-right: 88px;
 }
 
-.footer_title {
+.footer__title {
   text-transform: uppercase;
   color: var(--text-lite);
   font-weight: 700;
@@ -65,12 +70,12 @@ footer {
   letter-spacing: var(--min-spacing);
 }
 
-.footer_social-list {
+.footer__social-list {
   display: flex;
 
 }
 
-.footer_social-item{
+.footer__social-item{
   margin-top: 20px;
   margin-right: 10px;
 }
@@ -94,12 +99,12 @@ footer {
   display: flex;
   flex-direction: column;
 
-  .register_wrap {
+  .register__wrap {
   margin-top: 20px;
   }
 }
 
-.register_form {
+.register__form {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -114,18 +119,20 @@ footer {
   &::placeholder {
   color: rgba(255, 255, 255, 0.6);
   }
-}
 
-.register_form:focus {
+  &:focus {
   border-color: var(--logo-color);
+  }
 }
 
-.register_button {
-  padding-right: 30px;
+.register__form
+
+.register__button {
+  padding-right: 15px;
   margin-left: 12px;
 }
 
-.register_icon {
+.register__icon {
   position: absolute;
   top: 48px;
   right: 28px;
