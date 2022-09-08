@@ -89,6 +89,12 @@ header {
   overflow: hidden;
   display: block;
   transition: var(--time) var(--timing-function);
+  
+  .portfolio__item:hover &::before {
+  content: "";
+  transform: translateY(-100%);
+  transition: transform var(--time) var(--timing-function);
+  }
 }
 
 .overlay__text {
@@ -97,18 +103,6 @@ header {
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: var(--line-little);
-}
-
-.portfolio__item:hover .portfolio__link::before {
-  content: "";
-  transform: translateY(-100%);
-  transition: transform var(--time) var(--timing-function);
-}
-
-.portfolio__item:hover .overlay__wrap {
-  opacity: 0.9;
-  transform: translateY(-100%);
-  transition: transform var(--time) var(--timing-function);
 }
 
 .overlay__wrap {
@@ -126,6 +120,12 @@ header {
   &:hover::before {
   content: "";
   opacity: 0;
+  }
+
+  .portfolio__item:hover & {
+  opacity: 0.9;
+  transform: translateY(-100%);
+  transition: transform var(--time) var(--timing-function);
   }
 }
 

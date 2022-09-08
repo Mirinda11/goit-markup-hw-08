@@ -530,14 +530,11 @@ body {
   -webkit-transition: opacity var(--time) var(--timing-function), background-color var(--time) var(--timing-function);
   transition: opacity var(--time) var(--timing-function), background-color var(--time) var(--timing-function);
 }
-
 .navigation__link:hover::after {
   content: "";
   opacity: 1;
 }
-
-.navigation__link:hover,
-.navigation__link:focus {
+.navigation__link:hover, .navigation__link:focus {
   color: var(--logo-color);
 }
 
@@ -1197,7 +1194,7 @@ footer {
   border-color: var(--logo-color);
 }
 
-.register__form .register__button {
+.register__button {
   padding-right: 15px;
   margin-left: 12px;
 }
@@ -1299,15 +1296,6 @@ header {
   -webkit-transition: var(--time) var(--timing-function);
   transition: var(--time) var(--timing-function);
 }
-
-.overlay__text {
-  color: var(--text-lite);
-  background-color: var(--logo-color);
-  font-size: 18px;
-  line-height: 1.5;
-  letter-spacing: var(--line-little);
-}
-
 .portfolio__item:hover .portfolio__link::before {
   content: "";
   -webkit-transform: translateY(-100%);
@@ -1318,14 +1306,12 @@ header {
   transition: transform var(--time) var(--timing-function), -webkit-transform var(--time) var(--timing-function);
 }
 
-.portfolio__item:hover .overlay__wrap {
-  opacity: 0.9;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: -webkit-transform var(--time) var(--timing-function);
-  transition: -webkit-transform var(--time) var(--timing-function);
-  transition: transform var(--time) var(--timing-function);
-  transition: transform var(--time) var(--timing-function), -webkit-transform var(--time) var(--timing-function);
+.overlay__text {
+  color: var(--text-lite);
+  background-color: var(--logo-color);
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: var(--line-little);
 }
 
 .overlay__wrap {
@@ -1347,6 +1333,15 @@ header {
 .overlay__wrap:hover::before {
   content: "";
   opacity: 0;
+}
+.portfolio__item:hover .overlay__wrap {
+  opacity: 0.9;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform var(--time) var(--timing-function);
+  transition: -webkit-transform var(--time) var(--timing-function);
+  transition: transform var(--time) var(--timing-function);
+  transition: transform var(--time) var(--timing-function), -webkit-transform var(--time) var(--timing-function);
 }
 
 .card__title {

@@ -62,18 +62,18 @@
   border-radius: 4px;
   opacity: 0;
   transition: opacity var(--time) var(--timing-function),
-    background-color var(--time) var(--timing-function);
+  background-color var(--time) var(--timing-function);
   }
-}
 
-.navigation__link:hover::after {
+  &:hover::after {
   content: "";
   opacity: 1;
-}
+  }
 
-.navigation__link:hover,
-.navigation__link:focus {
+  &:hover,
+  &:focus {
   color: var(--logo-color);
+  }
 }
 
 .logo {
