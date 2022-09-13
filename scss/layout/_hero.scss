@@ -1,29 +1,101 @@
 .hero {
   background-color: var(--background-text-dark);
   text-align: center;
+  // display: flex;
+  // align-content: center;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .hero__img {
+  max-width: 479px;
+  height: 400px;
+  background-image: var(--gradient),
+    url(../images/header-imgmob.jpg);
+    background-image: var(--gradient),
+    url(../images/header-imgmob.webp);
+    @include retina {
+    background-image: var(--gradient),
+    url(../images/x2/Headerimgmobx2-min.jpg);
+    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+
+  @include mobile {
+    max-width: 767px;
+    height: 400px;
+  background-image: var(--gradient),
+    url(../images/header-imgmob.jpg);
+  background-image: var(--gradient),
+    url(../images/header-imgmob.webp);
+    @include retina {
+    background-image: var(--gradient),
+    url(../images/x2/Headerimgmobx2-min.jpg);
+    }
+  }
+
+  @include tablet {
+    max-width: 1199px;
+    height: 400px;
+    background-image: var(--gradient),
+    url(../images/header-imgtab.png);
+        background-image: var(--gradient),
+    url(../images/header-imgtab.webp);
+
+  @include retina {
+    background-image: var(--gradient),
+    url(../images/x2/Headerimgtabx2-min.jpg);
+    }
+  }
+
+  @include desktop {
   max-width: 1600px;
   height: 600px;
-  @extend %margin-auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
+  background-image: var(--gradient),
     url(../images/ImgHero.png);
-  @extend %image-notification;
+    background-image: var(--gradient),
+    url(../images/ImgHero.webp);
+
+  @include retina { 
+    background-image: var(--gradient),
+    url(../images/x2/headerimgdesktopx2-min.jpg);
+    }
+  }
 }
 
 .hero__title {
-  padding-top: 200px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--background-lite);
+  padding-bottom: 30px;
+  // @include mobile {
+  // font-weight: 900;
+  // font-size: 26px;
+  // line-height: 1.6;
+  // letter-spacing: 0.06em;
+  // text-transform: uppercase;
+  // color: var(--background-lite);
+
+  @include desktop{
+  // padding-top: 200px;
+  // font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  // letter-spacing: 0.06em;
+  // text-transform: uppercase;
+  // color: var(--background-lite);
   margin-bottom: 30px;
+  }
 }
 
 .hero__button {
@@ -60,17 +132,29 @@
 }
 
 .modal {
-  position: absolute;
-  width: 528px;
-  height: 581px;
-  background: var(--text-lite);
+    position: absolute;
+    width: 450px;
+  height: 609px;
+    background: var(--text-lite);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+    padding: 40px;
+  
+  @include mobile{
+  width: 450px;
+  height: 609px;
+  }
+
+  @include desktop{
+  position: absolute;
+  width: 528px;
+  height: 581px;
   padding: 40px;
+  }
 }
 
 .modal__close-button {
@@ -164,15 +248,15 @@
 }
 
 .modal__accept {
-  width: 100%;
-  color: var(--text-color);
-  font-size: var(--size-repeat);
-  line-height: 1.7;
-  letter-spacing: var(--min-spacing);
-  display: flex;
+    width: 100%;
+    height: 16px;
+    font-size: 12px;
+    line-height: var(--line-little);
+    letter-spacing: var(--min-spacing);
+    color: var(--text-color);
+      display: flex;
   justify-content: space-evenly;
   align-items: center;
-  cursor: pointer;
 
   & a {
   color: var(--logo-color);
@@ -200,6 +284,24 @@
   .modal__check-input:focus + &::before {
   border-color: var(--prime-tex);
   cursor: pointer;
+  }
+
+  @include desktop{
+  width: 100%;
+  color: var(--text-color);
+  font-size: var(--size-repeat);
+  line-height: 1.7;
+  letter-spacing: var(--min-spacing);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  }
+}
+
+.accept-contract{
+  @include mobile{
+    font-size: 12px;
   }
 }
 

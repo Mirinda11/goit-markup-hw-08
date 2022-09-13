@@ -28,6 +28,72 @@
           <span class="logo__text logo"lang="en">Web</span>
           <span class="logo__text " lang="en">Studio</span>
         </a>
+        <div class="menu" >
+          <button type="button" class="menu__btn-open" data-menu-open> 
+            <svg class="icon icon-menu">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mob__menu is-hidden" data-menu>
+          <div class="menu__wrap">
+            <div class="menu__top">
+              <button type="button" class="close__menu-btn" data-menu-close>
+                <svg class="icon icon-close_24">
+                  <use href="./images/icons.svg#icon-close_24"></use>
+                </svg>
+              </button>
+              <div class="menu__nav">
+                <nav class="menu__navigation">
+                  <ul class="menu__navigation__list">
+                    <li class="menu__navigation__item">
+                      <a class="menu__navigation__link logo" href="./index.html">Студiя</a>
+                    </li>
+                    <li class="menu__navigation__item">
+                      <a class="menu__navigation__link" href="./portfolio.html">Портфолiо</a>
+                    </li>
+                    <li class="menu__navigation__item">
+                      <a class="menu__navigation__link" href="./3.html">Контакти</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="menu__contact">
+              <a class="menu__contact__link mail" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+              <a class="menu__contact__link" href="tel:+380961111111">
+                +38 096 111 11 11
+              </a>
+            </div>
+            <div class="menu__soc">
+              <ul class="menu__soc-list" >
+                <li class="menu__soc-item">
+                  <a class="menu__soc-link" href="#">
+                    Instagram
+                  </a>
+                </li>
+                <li class="menu__soc-item">
+                <a class="menu__soc-link" href="#">
+                  Twitter
+                </a>
+                </li>
+                <li class="menu__soc-item">
+                <a class="menu__soc-link" href="#">
+                  Facebook
+                </a>
+                </li>
+                <li class="menu__soc-item">
+                <a class="menu__soc-link" href="#">
+                  LinkedIn
+                </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+<!-- mob nav -->
         <nav class="navigation ">
             <ul class="navigation__list">
               <li class="navigation__item">
@@ -55,6 +121,7 @@
             +38 096 111 11 11</a>
         </div>
       </div>
+
     </header>
     
     <main>
@@ -116,7 +183,7 @@
           </div>
           </div>
       </section>
-      <!-- про нас -->
+
       <section>
         <div class="about only-top">
           <ul class="about__list container">
@@ -174,13 +241,28 @@
         </div>
       </div>
       </section>
-      <!-- Чим ми займаємося -->
+
       <section class="work">
         <div class="work__image container">
           <h2 class="titles">Чим ми займаємося</h2>
             <ul class="work__list">
               <li class="work__item">
-                <img src="./images/box1.jpg" alt="робочий стіл" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/box1.jpg  1x,
+                      ./images/x2/imgwork1x2-min.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <img 
+                    srcset="./images/box1.jpg 1x, 
+                      ./images/x2/imgwork1x2-min.jpg 2x"
+                    src="./images/box1.jpg" 
+                    alt="робочий стіл" 
+                    width="370" 
+                  />
+                </picture>
                 <div class="work__wrap">
                   <p class="work__text">
                     Десктопні додатки
@@ -188,11 +270,23 @@
                 </div>
               </li>
               <li class="work__item">
-                <img
-                  src="./images/box2.jpg"
-                  alt="процес програмування"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/box2.jpg  1x,
+                      ./images/x2/imgwork2x2-min.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="
+                      ./images/box2.jpg  1x,
+                      ./images/x2/imgwork2x2-min.jpg 2x"
+                    src="./images/box2.jpg"
+                    alt="процес програмування"
+                    width="370"
+                  />
+                </picture>
                 <div class="work__wrap">
                   <p class="work__text">
                     Мобільні додатки
@@ -200,7 +294,20 @@
                 </div>
               </li>
               <li class="work__item">
-                <img src="./images/box3.jpg" alt="дизайн" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/box3.jpg 1x,
+                      ./images/x2/imgwork3x2-min.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <img 
+                    srcset="./images/box3.jpg 1x,
+                      ./images/x2/imgwork3x2-min.jpg 2x"
+                    src="./images/box3.jpg" 
+                    alt="дизайн" 
+                    width="370" />
+                </picture>
                 <div class="work__wrap">
                   <p class="work__text">
                     Дизайнерські рішення
@@ -216,11 +323,34 @@
             <h2 class="titles">Наша команда</h2>
             <ul class="team__list">
               <li class="team__item">
-                <img
-                  src="./images/teamimg1.jpg"
-                  alt="Product Designer"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="./images/teamimg1.jpg 1x, 
+                      ./images/x2/mob/imgteam1mobx2-min.jpg 2x"
+                    media="(max-width:767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/tab/imgteamtab1-min.jpg 1x, 
+                      ./images/x2/tab/imgteamtab1x2-min.jpg 2x"
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/desktop/imgteamdesk1-min.jpg 1x, 
+                      ./images/x2/desk/imgteamdesk1x2-min.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <img 
+                    class="team-img"
+                    srcset="./images/teamimg1.jpg 1x, 
+                      ./images/x2/mob/imgteam1mobx2-min.jpg 2x"
+                    src="./images/teamimg1.jpg"
+                    alt="Product Designer"
+                    width="450"
+                  />
+                </picture>
                 <div class="team__card">
                   <h3 class="team__info">Ігор Дем'яненко</h3>
                   <p class="team__text" lang="en">Product Designer</p>
@@ -257,11 +387,34 @@
                 </div>
               </li>
               <li class="team__item">
-                <img
-                  src="./images/teamimg2.jpg"
-                  alt="Frontend Developer"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="./images/teamimg2.jpg 1x,
+                      ./images/x2/mob/imgteam2mob2-min.jpg 2x"
+                    media="(max-width:767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/tab/imgteamtab2-min.jpg 1x,
+                      ./images/x2/tab/imgteamtab2x2-min.jpg 2x"
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/desktop/imgteamdesk2-min.jpg 1x,
+                      ./images/x2/desk/imgteamdesk2x2-min.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <img 
+                    class="team-img"
+                    srcset="./images/teamimg2.jpg 1x,
+                      ./images/x2/mob/imgteam2mob2-min.jpg 2x"
+                    src="./images/teamimg2.jpg"
+                    alt="Frontend Developer"
+                    width="450"
+                  />
+                </picture>
                 <div class="team__card">
                   <h3 class="team__info">Ольга Рєпіна</h3>
                   <p class="team__text" lang="en">Frontend Developer</p>
@@ -298,11 +451,34 @@
                 </div>
               </li>
               <li class="team__item">
-                <img
-                  src="./images/teamimg3.jpg"
-                  alt="Marketing"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="./images/teamimg3.jpg 1x,
+                      ./images/x2/mob/imgteam3mobx2-min.jpg 2x"
+                    media="(max-width:767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/tab/imgteamtab3-min.jpg 1x, 
+                      ./images/x2/tab/imgteamtab3x2-min.jpg 2x"
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/desktop/imgteamdesk3-min.jpg 1x, 
+                      ./images/x2/desk/imgteamdesk3x2-min.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <img 
+                    class="team-img"
+                    srcset="./images/teamimg3.jpg 1x,
+                      ./images/x2/mob/imgteam3mobx2-min.jpg 2x"
+                    src="./images/teamimg3.jpg"
+                    alt="Marketing"
+                    width="450"
+                  />
+                </picture>
                 <div class="team__card">
                   <h3 class="team__info">Микола Тарасов</h3>
                   <p class="team__text" lang="en">Marketing</p>
@@ -339,11 +515,33 @@
                 </div>
               </li>
               <li class="team__item">
-                <img
-                  src="./images/teamimg4.jpg"
-                  alt="UI Designer"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="./images/teamimg4.jpg 1x,
+                      ./images/x2/mob/imgteam4mobx2-min.jpg 2x"
+                    media="(max-width:767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/tab/imgteamtab4-min.jpg 1x,
+                    ./images/x2/tab/imgteamtab4x2-min.jpg 2x"
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/desktop/imgteamdesk4-min.jpg 1x,
+                      ./images/x2/desk/imgteamdesk4x2-min.jpg 2x"
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <img class="team-img"
+                    srcset="./images/teamimg4.jpg 1x,
+                      ./images/x2/mob/imgteam4mobx2-min.jpg 2x"
+                    src="./images/teamimg4.jpg"
+                    alt="UI Designer"
+                    width="450"
+                  />
+                </picture>
                 <div class="team__card">
                   <h3 class="team__info">Михайло Єрмаков</h3>
                   <p class="team__text" lang="en">UI Designer</p>
@@ -382,7 +580,7 @@
             </ul>
       </div>
       </section>
-      <!-- client -->
+
       <section>
         <div class="client container">
           <p class="titles">
@@ -498,16 +696,19 @@
           <p class="footer__title">Підпишіться на розсилку</p>
           <div class="register__wrap">
             <input type="text" class="register__form" name="mail" id="mail" placeholder="E-mail"/>
-            <button type="submit" class="register__button hero__button">
-              Підписатися
-            </button>
-            <svg class="register__icon" width="24" height="24px">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
+            <div class="button_wrap">
+              <button type="submit" class="register__button hero__button">
+                Підписатися
+              </button>
+              <svg class="register__icon" width="24" height="24px">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-    <script src="./modal.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

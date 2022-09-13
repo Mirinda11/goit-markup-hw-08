@@ -1,6 +1,8 @@
 @import './utils/normalize';
 @import './utils/vars';
 @import './utils/reset';
+@import './base/mixins';
+@import './base/is-hidden';
 @import './layout/header';
 @import './layout/hero';
 @import './layout/section';

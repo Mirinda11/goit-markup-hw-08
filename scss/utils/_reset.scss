@@ -32,7 +32,7 @@ body {
 }
 
 %container {
-  width: 1200px;
+  max-width: 1200px;
   height: auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -82,7 +82,7 @@ body {
   letter-spacing: var(--min-spacing);
   text-align: center;
   color: var(--prime-text);
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 }
 
 %topography{

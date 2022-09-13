@@ -1,21 +1,43 @@
 footer {
-  display: flex;
+
+  width: auto;
   background-color: var(--background-text-dark);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .footer{
-  display: flex;
+ display: flex;
+ flex-direction: column;
+@extend %container;
+
+  @include tablet{
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly
+  }
+
+  @include desktop{
+  flex-direction: row;
   align-items: baseline;
-  @extend %container;
+  }
 }
 
 .footer__info {
+ width: auto;
   color: var(--text-lite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet{
+   width: auto;
+   margin-bottom: 60px;
+  }
 }
 
 .logo__text{
+ font-family: Raleway;
   @extend %logo;
 }
 
@@ -30,7 +52,7 @@ footer {
   font-style: normal;
   font-size: var(--size-repeat);
   line-height: 1.7;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--min-spacing);
 }
 
 .address-list {
@@ -38,7 +60,13 @@ footer {
 }
 
 .footer__item{
+ text-align: center;
   margin-bottom: 9px;
+
+  @include desktop{
+  text-align: left;
+  }
+
 }
 
 .footer__link {
@@ -52,13 +80,24 @@ footer {
 }
 
 .footer__social {
+  width: 100%;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: baseline;
-  background-color: var(--background-text-dark);
+  padding: 60px 0 60px 0;
+ @include tablet{
+width:auto;
+padding: 0;
+margin-bottom: 60px;
+}
+
+  @include desktop{
   margin-left: 66px;
   margin-right: 88px;
+    justify-content: flex-start;
+  align-items: baseline;
+
+  }
 }
 
 .footer__title {
@@ -68,6 +107,12 @@ footer {
   font-size: var(--size-repeat);
   line-height: var(--line-little);
   letter-spacing: var(--min-spacing);
+  text-align: center;
+
+  @include desktop{
+   width: 100%;
+   text-align:start;
+  }
 }
 
 .footer__social-list {
@@ -84,6 +129,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--text-lite);
 
+
   &:hover,
   &:focus {
   fill: var(--text-lite);
@@ -95,17 +141,36 @@ footer {
 // social
 
 .register {
-  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
-  .register__wrap {
-  margin-top: 20px;
+  @include desktop{
+   width: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
   }
 }
 
+  .register__wrap {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop{
+  flex-direction: row;
+  align-items: flex-start;
+  }
+  }
+
+
 .register__form {
-  width: 358px;
+  width: auto;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -114,6 +179,7 @@ footer {
   cursor: pointer;
   outline: none;
   padding-left: 16px;
+  margin-right: 12px;
   transition: outline-color var(--time) var(--timing-function);
 
   &::placeholder {
@@ -123,15 +189,49 @@ footer {
   &:focus {
   border-color: var(--logo-color);
   }
+
+  @include mobile{
+  width: 450px;
+  }
+
+  @include tablet{
+  width: 450px;
+  }
+
+  @include desktop{
+  width: 358px;
+  }
+}
+
+.button_wrap{
+  position: relative;
 }
 
 .register__button {
+  margin-top: 20px;
   padding-right: 15px;
   margin-left: 12px;
+
+  @include desktop{
+   margin: 0;
+   padding: 0;
+  }
 }
 
 .register__icon {
   position: absolute;
-  top: 48px;
+
+  bottom: 13px;
+  right: 24px;
+
+  @include tablet{
+  top: 34px;
   right: 28px;
+  }
+
+  @include desktop{
+  top: 13px;
+  right: 18px;
+  }
 }
+
