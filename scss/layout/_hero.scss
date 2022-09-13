@@ -31,9 +31,9 @@
   @include mobile {
     max-width: 767px;
     height: 400px;
-  background-image: var(--gradient),
+    background-image: var(--gradient),
     url(../images/header-imgmob.jpg);
-  background-image: var(--gradient),
+    background-image: var(--gradient),
     url(../images/header-imgmob.webp);
     @include retina {
     background-image: var(--gradient),
@@ -65,7 +65,7 @@
 
   @include retina { 
     background-image: var(--gradient),
-    url(../images/x2/headerimgdesktopx2-min.jpg);
+    url(../images/x2/headerImgdesktopx2-min.jpg);
     }
   }
 }
