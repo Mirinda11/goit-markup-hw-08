@@ -10,12 +10,14 @@ header {
 
   @include tablet{
   width: auto;
-  margin-top: 100px;
+  margin-top: 60px;
+  margin-bottom: 0;
   }
 
   @include desktop {
   width: auto;
   margin-top: 100px;
+  margin-bottom: 0;
   }
 
 }
@@ -23,11 +25,12 @@ header {
 .nav__list {
   width: 350px;
   display: flex;
-  justify-content: center;
+justify-content: flex-start;
   flex-wrap: wrap;
 
   @include tablet{
   width: auto;
+
   }
 
   @include desktop{
@@ -89,8 +92,15 @@ header {
 
 .portfolio {
   display: flex;
-  justify-content: flex-start;
+  // justify-content: flex-start;
+
+  @include tablet{
+      margin-top: 30px;
+  }
+
+  @include desktop{
   margin-top: 50px;
+  }
 }
 
 .portfolio__list {
@@ -100,10 +110,11 @@ header {
   margin-bottom: 60px;
 
   @include tablet{
-    width: auto;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+
 
   }
 
@@ -137,6 +148,20 @@ header {
   @include desktop{
   width: 370px;
   height: 404px;
+  }
+}
+
+.portfolio__item:last-of-type{
+    @include mobile{
+  display: none;
+  }
+
+  @include tablet{
+    display: inline;
+  }
+
+  @include desktop{
+  display: none;
   }
 }
 

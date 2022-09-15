@@ -34,6 +34,11 @@ footer {
    width: auto;
    margin-bottom: 60px;
   }
+
+    @include desktop{
+align-items: flex-start;
+margin: 0;
+  }
 }
 
 .logo__text{
@@ -70,6 +75,7 @@ footer {
 }
 
 .footer__link {
+  width: 100%;
   color: var(--text-lite);
   opacity: 60%;
   margin-bottom: 9px;
@@ -156,7 +162,6 @@ margin-bottom: 60px;
 
   .register__wrap {
   margin-top: 20px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

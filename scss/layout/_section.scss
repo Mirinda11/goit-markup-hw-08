@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 30px;
+  // padding-bottom: 60px;
 
     @include tablet{
         display: flex;
@@ -31,11 +32,23 @@
 }
 
 .about__item{
+    padding-bottom: 60px;
   @include tablet{
   width: 354px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: flex-start;
+  padding-bottom: 60px;
+  }
+
+  @include desktop{
+      width: 270px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 0;
   }
 }
 
@@ -102,7 +115,6 @@
   font-size: var(--size-repeat);
   line-height: 1.71;
   letter-spacing: var(--min-spacing);
-  padding-bottom: 30px;
 
   @include desktop{
   width: 270px;
@@ -130,16 +142,32 @@
 
 .work__image{
   @extend %container;
+  padding-bottom: 94px;
   // @extend %section;
 }
 
 .titles {
-  @extend %titles;
-  padding: 60px 0 30px 0;
+      font-weight: 700;
+      line-height: var(--line-little);
+  letter-spacing: var(--min-spacing);
+  text-align: center;
+  color: var(--prime-text);
+      font-size: 28px;
+        padding: 60px 0 30px 0;
 
+  @include tablet{
+  padding: 60px 0 30px 0;
+    font-size: 28px;
+
+}
   @include desktop{
   padding: 94px 0 50px 0;
+
+  font-size: 36px;
  }
+
+  @extend %section;
+  @extend %titles;
 }
 
 .work__list {
@@ -197,6 +225,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 30px;
+  padding-bottom: 94px;
   }
 }
 
