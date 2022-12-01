@@ -5,9 +5,9 @@
   max-width: 479px;
   height: 400px;
   background-image: var(--gradient),
-    url(../images/header-imgmob.jpg);
+    url(../images/Img-min.jpg);
     background-image: var(--gradient),
-    url(../images/header-imgmob.webp);
+    url(../images/Img-min.webp);
 
     @include retina {
     background-image: var(--gradient),
@@ -27,9 +27,9 @@
     max-width: 767px;
     height: 400px;
     background-image: var(--gradient),
-    url(../images/header-imgmob.jpg);
+    url(../images/x2/header-imgmob.jpg);
     background-image: var(--gradient),
-    url(../images/header-imgmob.webp);
+    url(../images/x2/header-imgmob.webp);
     @include retina {
     background-image: var(--gradient),
     url(../images/x2/Headerimgmobx2-min.jpg);
@@ -41,9 +41,9 @@
     max-width: 1199px;
     height: 400px;
     background-image: var(--gradient),
-    url(../images/header-imgtab.png);
+    url(../images/tab/header-imgtab.png);
         background-image: var(--gradient),
-    url(../images/header-imgtab.webp);
+    url(../images/tab/header-imgtab.webp);
 
   @include retina {
     background-image: var(--gradient),
@@ -57,8 +57,8 @@
   height: 600px;
   background-image: var(--gradient),
     url(../images/Img-min.jpg);
-    // background-image: var(--gradient),
-    // url(../images/Img-min.webp);
+    background-image: var(--gradient),
+    url(../images/Img-min.webp);
 
   @include retina { 
     background-image: var(--gradient),
@@ -293,7 +293,6 @@
 }
 
 .modal__label {
-  display: block;
   font-size: 12px;
   line-height: var(--line-little);
   letter-spacing: 0.01em;
@@ -305,42 +304,86 @@
   padding-bottom: 4px;
 }
 
-.modal__accept {
-    width: 100%;
-    height: 16px;
+.modal__accept span {
+    // width: 16px;
+    // height: 16px;
     font-size: 12px;
     line-height: var(--line-little);
     letter-spacing: var(--min-spacing);
     color: var(--text-color);
-      display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+    display: flex;
+    margin-left: 13px;
+    justify-content: flex-start;
+    align-items: center;
 
   & a {
   color: var(--logo-color);
   text-decoration: underline;
+  padding-left: 4px;
   }
 
   &::before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 3px solid var(--prime-text);
-  border-radius: 3px;
-  display: block;
-  transition: background-color var(--time) var(--timing-function);
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 3px solid var(--prime-text);
+    border-radius: 3px;
+    transition: background-color var(--time) var(--timing-function);
+  }
+
+  .accept-text{
+    font-size: 12px;
+    line-height: var(--line-little);
+    letter-spacing: var(--min-spacing);
+    color: var(--text-color);
+    margin-left: 8px;
   }
 
   .modal__check-input:checked:checked + &::before{
-  background-color: var(--logo-color);
-  background-image: url(../images/icon-check.svg);
-  border: none;
-  background-repeat: repeat;
-  background-position: center;
+    background-color: var(--logo-color);
+    background-image: url(../images/Vectorcheck.svg);
+    background-repeat:no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    border: none;
   }
 
   .modal__check-input:focus + &::before {
-  border-color: var(--prime-tex);
+  border-color: var(--prime-text);
+  cursor: pointer;
+  }
+
+  width: 100%;
+  color: var(--text-color);
+  font-size: var(--size-repeat);
+  line-height: 1.7;
+  letter-spacing: var(--min-spacing);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+
+  @include mobile{
+    width: 100%;
+  color: var(--text-color);
+  font-size: var(--size-repeat);
+  line-height: 1.7;
+  letter-spacing: var(--min-spacing);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  }
+
+  @include tablet{
+    width: 100%;
+  color: var(--text-color);
+  font-size: var(--size-repeat);
+  line-height: 1.7;
+  letter-spacing: var(--min-spacing);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   cursor: pointer;
   }
 
@@ -351,19 +394,25 @@
   line-height: 1.7;
   letter-spacing: var(--min-spacing);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   cursor: pointer;
   }
 }
 
-.accept-contract{
+.icon-Vectorcheck{
+  display: none;
+}
+
+.accept-contract {
   @include mobile{
     font-size: 12px;
+    margin-left: 4px;
   }
 }
 
 .modal__button {
+  display: block;
   height: 50px;
   width: 200px;
   font-weight: 700;
@@ -379,6 +428,10 @@
   box-shadow: 0px 4px 4px 0px #00000026;
   cursor: pointer;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+
 }
 
 .visually-hidden {

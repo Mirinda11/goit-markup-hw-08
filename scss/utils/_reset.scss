@@ -31,8 +31,26 @@ body {
   color: var(--prime-text);
 }
 
-%container {
+%container-desk{
   max-width: 1200px;
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%container-tab{
+  max-width: 768px;
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%container-mob{
+  max-width: 480px;
   height: auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -44,6 +62,10 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+// %section-mob{
+  
+// }
 
 %logo{
   color: var(--logo-color);
@@ -102,13 +124,22 @@ body {
 }
 
 %only-top{
-  margin-top: 94px;
+  padding-top: 94px;
+}
+
+%only-top-mob{
+  padding-top: 60px;
 }
 
 %only-bottom{
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 
 %zero{
   margin:0;
+}
+
+%retreat{
+  padding-top: 60px;
+  padding-bottom: 60px;
 }

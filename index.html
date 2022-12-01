@@ -47,7 +47,7 @@
                 <nav class="menu__navigation">
                   <ul class="menu__navigation__list">
                     <li class="menu__navigation__item">
-                      <a class="menu__navigation__link logo" href="./index.html">Студiя</a>
+                      <a class="menu__navigation__link " href="./index.html">Студiя</a>
                     </li>
                     <li class="menu__navigation__item">
                       <a class="menu__navigation__link" href="./portfolio.html">Портфолiо</a>
@@ -60,7 +60,7 @@
               </div>
             </div>
             <div class="menu__contact">
-              <a class="menu__contact__link mail" href="mailto:info@devstudio.com">
+              <a class="menu__contact__link mail " href="mailto:info@devstudio.com">
                 info@devstudio.com
               </a>
               <a class="menu__contact__link" href="tel:+380961111111">
@@ -179,9 +179,23 @@
                   <label for="comments"><span class="modal__label"> Коментар</span></label>
                   <textarea
                     name="comments" id="coments" class="modal__input comments" placeholder="Введіть текст"></textarea>
-                  <input type="checkbox" class="modal__check-input  visually-hidden" 
+                  <input type="checkbox" class="modal__check-input visually-hidden " 
                     name="accept" value="true" id="acept" placeholder=""/>
-                  <label for="acept" class="modal__accept">Погоджуюся з розсилкою та приймаю <a class="acept-contract" href="#">Умови договору</a></label>
+
+                  <label for="acept" class="modal__accept">
+                    <span>
+                      <svg class="icon icon-Vectorcheck" width="16px" height="15px">
+                        <use href="./images/icons.svg#icon-Vectorcheck"></use>
+                      </svg>
+
+                      <p class="accept-text">
+                        Погоджуюся з розсилкою та приймаю
+                      </p>
+                      <a class="acept-contract" href="#">
+                        Умови договору
+                      </a>
+                    </span>
+                  </label>
                   <button type="submit" class="modal__button">
                     Відправити
                   </button>
@@ -192,7 +206,7 @@
       </section>
 
       <section>
-        <div class="about only-top">
+        <div class="about">
           <ul class="about__list container">
             <li class="about__item">
               <div class="about__img img-antenna">
