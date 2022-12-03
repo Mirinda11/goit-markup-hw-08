@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-    height: 60px;
+  height: 60px;
 
   @include tablet{
     height: 80px;
@@ -51,21 +51,14 @@ margin-left: auto;
 }
 
 .menu__btn-open{
- border: none;
- background-color: var(--text-lite);
-
-//  @include tablet{
-//   display: none;
-//  }
-//  @include desktop{
-//   display: none;
-//  }
+  border: none;
+  background-color: var(--text-lite);
 }
 
 .icon-menu {
- fill: black;
- width:24px;
- height:16px;
+  fill: black;
+  width:24px;
+  height:16px;
 }
 
 .mob__menu {
@@ -83,7 +76,6 @@ margin-left: auto;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 40px;
-
   }
 }
 
@@ -105,28 +97,20 @@ margin-left: auto;
 }
 
 .menu__navigation{
-display: flex;
+  display: flex;
 }
 
 .menu__navigation__list{
- display: flex;
- flex-direction: column;
-justify-content: space-evenly;
-color: var(--prime-text);
-
-  }
-
-// padding-bottom: 302px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--prime-text);
+}
 
 
 .menu__navigation__item{
     padding-bottom: 36px;
     color: var(--prime-text);
-
-    // &:first-child{
-    //   color: var(--logo-color);
-    // }
-
 
 }
 
@@ -139,11 +123,11 @@ color: var(--prime-text);
 
 .menu__navigation__link{
   font-family: 'Roboto';
-font-weight: 500;
-font-size: 40px;
-line-height: 1.17;
-letter-spacing: 0.02em;
-color: var(--prime-text);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--prime-text);
 
   &:hover:focus{
   color: var(--logo-color);
@@ -154,38 +138,38 @@ color: var(--prime-text);
 
 
 .menu__contact{
- display: flex;
- flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 
- @include desktop{
+  @include desktop{
   flex-direction: row;
- }
+  }
 
 
 }
 
 .menu__contact__link{
- font-weight: 500;
-font-size: 34px;
-line-height: 1.17;
-letter-spacing: 0.02em;
-color: var(--logo-color);
-padding-bottom: 32px;
- 
-@include tablet{
-  display: none;
-}
-@include desktop{
-  display: none;
-}
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--logo-color);
+  padding-bottom: 32px;
+  
+  @include tablet{
+    display: none;
+    }
+  @include desktop{
+    display: none;
+    }
 }
 
 .mail{
- font-weight: 500;
-font-size: 24px;
-line-height: 1.17;
-letter-spacing: 0.02em;
-color: #757575;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
 
 }
 
@@ -228,52 +212,19 @@ color: #757575;
 //                                tab-desktop menu
 
 
-
-// .navigation{
-//   @include mobile{
-//  display: none;
-//  }
-// }
-
-// .contact{
-
-// }
 .tab-desk-menu{
-    display: none;
+  display: none;
 
-      @include tablet{
-    display: flex;
-    margin-left: 88px;
-  // // justify-content: space-between;
+  @include tablet{
+  display: flex;
+  margin-left: 88px;
   }
 
   @include desktop{
   display: flex;
-      margin-left: 93px;
-
-//   justify-content: space-between;
+  margin-left: 93px;
   }
 }
-
-// .tab-desk-menu .container{
-//   display: none;
-//   @include mobile{
-//   display: none;
-//   }
-
-//   @include tablet{
-//   display: flex;
-// //   justify-content: space-between;
-
-// }
-
-//   @include desktop{
-//   display: flex;
-// //   justify-content: space-between;
-
-//   }
-// }
-
 
 .navigation {
 
@@ -285,7 +236,6 @@ color: #757575;
   @include desktop{
     display: flex;
     gap: 50px;
-  // margin-left: 93px;
   }
 
 }
@@ -299,16 +249,11 @@ width: 100%;
   }
 }
 
-// .navigation__item:nth-child(1) {
-//   margin-right: 53px;
-// }
-
-// .navigation__item:nth-child(2) {
-//   margin-right: 50px;
-// }
+.navigation__list::ntn(1){
+  color: var(--logo-color);
+}
 
 .navigation__link {
-
     @include tablet{
   position: relative;
   font-family: inherit;
@@ -352,6 +297,7 @@ width: 100%;
   &:focus {
   color: var(--logo-color);
   }
+
 }
 
 .logo {
@@ -363,6 +309,8 @@ width: 100%;
 }
 
 /* contact */
+
+
 
 .contact {
 
@@ -386,15 +334,8 @@ width: 100%;
     line-height: var(--line-little);
         margin-left: 300px;
   }
-
-
 }
 
-// .contact__item{
-// @include desktop{
-// // width: 100%;
-// }
-// }
 
 .contact__link {
 
@@ -417,15 +358,18 @@ width: 100%;
           transition: color var(--time) var(--timing-function);
         }
 
-        &.mail{
+          &:hover,
+          &:focus {
+          fill: var(--logo-color);
           color: var(--logo-color);
-        }
-
-
-        
+          }
 }
 
-
+@media screen and (min-width:1200px) {
+  .contact__item {
+    color: var(--logo-color);
+  }
+}
 
 // .contact__item:first-of-type{
 
@@ -448,9 +392,6 @@ width: 100%;
   }
 }
 
-.mail-logo{
-color: var(--logo-color);
-}
 
 .contact__icon {
 
