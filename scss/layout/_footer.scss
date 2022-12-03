@@ -4,13 +4,17 @@ footer {
   background-color: var(--background-text-dark);
   padding-top: 60px;
   padding-bottom: 60px;
+  
 }
 
 .footer{
   display: flex;
   flex-direction: column;
 
+
+
   @include tablet{
+          display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -18,12 +22,10 @@ footer {
   }
 
   @include desktop{
+      display: flex;
+      flex-wrap: nowrap;
   flex-direction: row;
   align-items: baseline;
-  }
-
-  &.container{
-    background-color: var(--background-text-dark);
   }
 }
 
@@ -39,14 +41,14 @@ footer {
   margin-bottom: 60px;
   }
 
-    @include desktop{
-align-items: flex-start;
-margin: 0;
+  @include desktop{
+    align-items: flex-start;
+    margin: 0;
   }
 }
 
-.logo__text{
- font-family: Raleway;
+.logo__text footer{
+  font-family: Raleway;
   @extend %logo;
 }
 
@@ -69,7 +71,7 @@ margin: 0;
 }
 
 .footer__item{
- text-align: center;
+  text-align: center;
   margin-bottom: 9px;
 
   @include desktop{
@@ -97,9 +99,9 @@ margin: 0;
   @extend %retreat;
   
   @include tablet{
-width:auto;
-padding: 0;
-margin-bottom: 60px;
+  width: auto;
+  padding: 0;
+  margin-bottom: 60px;
 }
 
   @include desktop{
@@ -121,8 +123,8 @@ margin-bottom: 60px;
   text-align: center;
 
   @include desktop{
-   width: 100%;
-   text-align:start;
+  width: 100%;
+  text-align:start;
   }
 }
 
@@ -157,7 +159,7 @@ margin-bottom: 60px;
   flex-direction: column;
 
   @include desktop{
-   width: auto;
+  width: 0 auto;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
@@ -180,7 +182,7 @@ margin-bottom: 60px;
 
 
 .register__form {
-  width: auto;
+  width: 70%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -220,7 +222,11 @@ margin-bottom: 60px;
 .register__button {
   margin-top: 20px;
   padding-right: 15px;
-  margin-left: 12px;
+
+  @include mobile{
+      margin-left: 12px;
+  }
+
 
   @include desktop{
    margin: 0;

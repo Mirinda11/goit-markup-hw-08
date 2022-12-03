@@ -123,7 +123,7 @@
 .about__text {
   @extend %background-lite;
   color: var(--text-color);
-  // font-size: var(--size-repeat);
+  font-size: var(--size-repeat);
   line-height: 1.71;
   letter-spacing: var(--min-spacing);
 
@@ -301,16 +301,15 @@
 
 .team-img{
   width: 450px;
-  height: 460px;
+
 
   @include tablet{
   width:354px;
-  height:374px;
   }
 
   @include desktop{
   width:270px;
-  height:260px;
+
   }
 }
 
@@ -355,15 +354,9 @@
   gap: 10px;
 }
 
-.social__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  fill: #afb1b8;
-  border-radius: 50%;
+.social__item{
   transition: background-color var(--time) var(--timing-function);
+    border-radius: 50%;
 
   &:hover,
   &:focus {
@@ -372,6 +365,24 @@
   border-radius: 50%;
   }
 }
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  fill: #afb1b8;
+  border-radius: 50%;
+  // transition: background-color var(--time) var(--timing-function);
+
+  // &:hover,
+  // &:focus {
+  // fill: var(--text-lite);
+  // background-color: var(--logo-color);
+  // border-radius: 50%;
+  }
+
 
 // /* ..........................client................................... */
 
@@ -396,6 +407,8 @@
   justify-content: center;
   width: 210px;
   height: 92px;
+    transition: border var(--time) var(--timing-function);
+  
   
   @include tablet{
   width: 226px;
@@ -404,6 +417,13 @@
   @include desktop{
   flex-wrap: wrap;
   width: 170px;
+  }
+
+  &:hover,
+  &:focus {
+  border: 1px solid  var(--logo-color);
+  border-radius: 4px;
+
   }
 }
 
@@ -426,12 +446,7 @@
   width: 170px;
   }
 
-  &:hover,
-  &:focus {
-  border: 1px solid  var(--logo-color);
-  border-radius: 4px;
-  transition: border var(--time) var(--timing-function);
-  }
+
 }
 
 .icons {

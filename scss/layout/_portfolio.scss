@@ -1,8 +1,12 @@
 header {
   border-bottom: #ececec 1px solid;
-
 }
 
+.contact__link{
+  &.mail{
+    color: var(--text-color);
+  }
+}
 
 .nav__btn .container{
   // display: flex;

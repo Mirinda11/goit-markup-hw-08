@@ -9,10 +9,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-      height: 60px;
-  @include mobile{
     height: 60px;
-  }
 
   @include tablet{
     height: 80px;
@@ -23,11 +20,8 @@
   }
 }
 
-.logo__link {
-  // width: 185px;
+.logo__link  {
   display: flex;
-  // justify-content: center;
-
 }
 
 .logo__text {
@@ -41,19 +35,19 @@
 }
 
 .logo{
- color: var(--logo-color);
+  color: var(--logo-color);
 }
 
 .menu{
 margin-left: auto;
 
- @include tablet{
+  @include tablet{
   display: none;
- }
+  }
 
   @include desktop{
   display: none;
- }
+  }
 }
 
 .menu__btn-open{
@@ -110,13 +104,9 @@ margin-left: auto;
   fill: black;
 }
 
-// .menu__navigation{
-// color: var(--prime-text);
-
-//   &:hover{
-//     color: var(--logo-color);
-//   }
-// }
+.menu__navigation{
+display: flex;
+}
 
 .menu__navigation__list{
  display: flex;
@@ -124,13 +114,18 @@ margin-left: auto;
 justify-content: space-evenly;
 color: var(--prime-text);
 
+  }
+
 // padding-bottom: 302px;
 
-}
 
 .menu__navigation__item{
     padding-bottom: 36px;
     color: var(--prime-text);
+
+    // &:first-child{
+    //   color: var(--logo-color);
+    // }
 
 
 }
@@ -149,11 +144,13 @@ font-size: 40px;
 line-height: 1.17;
 letter-spacing: 0.02em;
 color: var(--prime-text);
+
+  &:hover:focus{
+  color: var(--logo-color);
+  }
 }
 
-.menu__navigation__link:hover{
-  color: var(--logo-color);
-}
+// .menu__navigation__link
 
 
 .menu__contact{
@@ -242,52 +239,55 @@ color: #757575;
 
 // }
 .tab-desk-menu{
-  width: 100%;
     display: none;
+
       @include tablet{
-  display: flex;
-  justify-content: space-between;
-}
+    display: flex;
+    margin-left: 88px;
+  // // justify-content: space-between;
+  }
 
   @include desktop{
   display: flex;
-  justify-content: space-between;
-  }
+      margin-left: 93px;
 
-}
-
-.tab-desk-menu .container{
-  display: none;
-  @include mobile{
-  display: none;
-  }
-
-
-
-  @include tablet{
-  display: flex;
-  justify-content: space-between;
-}
-
-  @include desktop{
-  display: flex;
-  justify-content: space-between;
+//   justify-content: space-between;
   }
 }
+
+// .tab-desk-menu .container{
+//   display: none;
+//   @include mobile{
+//   display: none;
+//   }
+
+//   @include tablet{
+//   display: flex;
+// //   justify-content: space-between;
+
+// }
+
+//   @include desktop{
+//   display: flex;
+// //   justify-content: space-between;
+
+//   }
+// }
 
 
 .navigation {
-  width: 100%;
-@include tablet{
+
+  @include tablet{
     display: flex;
     justify-content: space-around;
+  }
 
   @include desktop{
-  display: flex;
+    display: flex;
+    gap: 50px;
   // margin-left: 93px;
-
   }
-}
+
 }
 
 .navigation__list {
@@ -295,7 +295,7 @@ width: 100%;
     @include tablet{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+      gap: 50px;
   }
 }
 
@@ -373,10 +373,10 @@ width: 100%;
     font-weight: 500;
     font-size: var(--size-repeat);
     line-height: var(--line-little);
+            margin-left: 96px;
   }
 
   @include desktop{
-    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -384,7 +384,10 @@ width: 100%;
     font-weight: 500;
     font-size: var(--size-repeat);
     line-height: var(--line-little);
+        margin-left: 300px;
   }
+
+
 }
 
 // .contact__item{
@@ -405,6 +408,7 @@ width: 100%;
     }
         @include desktop{
           display: flex;
+          align-items: center;
           justify-content: flex-end;
           font-weight: 500;
           font-size: var(--size-repeat);
@@ -412,33 +416,50 @@ width: 100%;
           color: var(--text-color);
           transition: color var(--time) var(--timing-function);
         }
+
+        &.mail{
+          color: var(--logo-color);
+        }
+
+
+        
 }
 
-.contact__item:first-of-type{
 
-    @include desktop{
-    // margin-bottom: 10px;
-  }
 
-  &:hover,
-  &:focus {
-  fill: var(--logo-color);
-  color: var(--logo-color);
-  }
-}
+// .contact__item:first-of-type{
+
+//   //   @include desktop{
+//   //   // margin-bottom: 10px;
+//   // }
+
+//   &:hover,
+//   &:focus {
+//   fill: var(--logo-color);
+//   color: var(--logo-color);
+//   }
+  
+// }
 
 .mail {
     margin-bottom: 10px;
       @include desktop{
   margin:0 30px 0 0;
-  color: var(--logo-color);
   }
+}
+
+.mail-logo{
+color: var(--logo-color);
 }
 
 .contact__icon {
 
-      @include tablet{}
+      @include tablet{
   fill: currentColor;
   margin-right: 10px;
 }
+}
+
+
+
 
