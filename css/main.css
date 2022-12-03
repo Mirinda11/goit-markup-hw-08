@@ -2084,7 +2084,7 @@ footer {
 }
 @media screen and (min-width: 1200px) {
   .register {
-    width: 0 auto;
+    width: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

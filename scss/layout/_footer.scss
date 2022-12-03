@@ -159,7 +159,7 @@ footer {
   flex-direction: column;
 
   @include desktop{
-  width: 0 auto;
+  width: auto;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
