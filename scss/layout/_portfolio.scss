@@ -2,27 +2,7 @@ header {
   border-bottom: #ececec 1px solid;
 }
 
-.contact__link-portfolio{
-    @include tablet{
-      display: flex;
-      font-weight: 500;
-      font-size: var(--size-repeat);
-      line-height: var(--line-little);
-      color: var(--text-color);
-      transition: color var(--time) var(--timing-function);
-    }
-        @include desktop{
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          font-weight: 500;
-          font-size: var(--size-repeat);
-          line-height: var(--line-little);
-          color: var(--text-color);
-          transition: color var(--time) var(--timing-function);
-    color: var(--text-color);
-        }
-}
+
 
 .nav__btn .container{
   // display: flex;

@@ -365,25 +365,18 @@ width: 100%;
           }
 }
 
-@media screen and (min-width:1200px) {
-  .contact__item {
-    color: var(--logo-color);
+.contact__item{
+
+    @include desktop{
+    // margin-bottom: 10px;
+  }
+
+  &:hover,
+  &:focus {
+  fill: var(--logo-color);
+  color: var(--logo-color);
   }
 }
-
-// .contact__item:first-of-type{
-
-//   //   @include desktop{
-//   //   // margin-bottom: 10px;
-//   // }
-
-//   &:hover,
-//   &:focus {
-//   fill: var(--logo-color);
-//   color: var(--logo-color);
-//   }
-  
-// }
 
 .mail {
     margin-bottom: 10px;

@@ -905,11 +905,11 @@ body {
   color: var(--logo-color);
 }
 
-@media screen and (min-width: 1200px) {
-  .contact__item {
-    color: var(--logo-color);
-  }
+.contact__item:hover, .contact__item:focus {
+  fill: var(--logo-color);
+  color: var(--logo-color);
 }
+
 .mail {
   margin-bottom: 10px;
 }
@@ -2215,40 +2215,6 @@ footer {
 
 header {
   border-bottom: #ececec 1px solid;
-}
-
-@media screen and (min-width: 768px) {
-  .contact__link-portfolio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-weight: 500;
-    font-size: var(--size-repeat);
-    line-height: var(--line-little);
-    color: var(--text-color);
-    -webkit-transition: color var(--time) var(--timing-function);
-    transition: color var(--time) var(--timing-function);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contact__link-portfolio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    font-weight: 500;
-    font-size: var(--size-repeat);
-    line-height: var(--line-little);
-    color: var(--text-color);
-    -webkit-transition: color var(--time) var(--timing-function);
-    transition: color var(--time) var(--timing-function);
-    color: var(--text-color);
-  }
 }
 
 .nav__btn .container {
