@@ -1,36 +1,29 @@
-.only-top {
-  padding-top: 60px;
 
-  @include desktop{
-  padding-top: 94px;
-  }
+.about{
+  @extend %section;
 }
 
-.about .container{
-    @extend %retreat;
-
-    @include desktop{
-      padding-bottom: 0;
-    }
-}
-
-.about__list  {
+.about__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
 
-
-
-
-    @include tablet{
-        display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-    gap: 30px;
+  @media screen and (min-width:$mobile){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
   }
 
-  @include desktop{
+  @media screen and (min-width:$tablet) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  }
+
+  @media screen and (min-width:$desktop){
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -40,40 +33,45 @@
 }
 
 .about__item{
-  
-  @include tablet{
-  width: 354px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  @media screen and (min-width:$mobile){
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
   }
+  
+  @media screen and (min-width:$tablet){
+  width: 354px;
+  }
 
-  @include desktop{
-      width: 270px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  @media screen and (min-width:$desktop){
+  width: 270px;
   padding: 0;
   }
 }
 
 .about__img {
+  width: 100%;
   display: flex;
   justify-content: center;
   height: 120px;
   background-color: var(--backgraund-grey);
   border-radius: 4%;
-  // margin-top: 30px;
 
-    & ::before {
+  & ::before {
   content: "";
   width: 100%;
   border-radius: 4%;
   }
 
-  @include tablet{
+  @media screen and (min-width:$tablet){
   width: 354px;
   display: flex;
   flex-direction: row;
@@ -86,94 +84,84 @@
   content: "";
   width: 354px;
   border-radius: 4%;
+    }
   }
 
-
-  @include desktop{
+  @media screen and (min-width:$desktop) {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 270px;
-  }
 
   & ::before {
   content: "";
   width: 270px;
   border-radius: 4%;
-  }
+    }
   }
 }
 
 .about__title {
-  @extend %background-lite;
   text-transform: uppercase;
+  font-weight: 700;
   font-size: var(--size-repeat);
+  line-height: calc(16.41px/14px);
   text-align: center;
   padding-top: 30px;
   padding-bottom: 10px;
 
-
-  @include desktop{
-  line-height: var(--line-little);
+  @media screen and (min-width:$desktop){
   padding-bottom: 10px;
   }
 
+  @extend %background-lite;
 }
 
 .about__text {
-  @extend %background-lite;
   color: var(--text-color);
   font-size: var(--size-repeat);
-  line-height: 1.71;
+  line-height:calc(24px/14px);
   letter-spacing: var(--min-spacing);
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   width: 270px;
   }
+
+  @extend %background-lite;
 }
 
 /*                section image                          */
 
 .work{
   display: none;
-  @include mobile{
+
+
+  @media screen and (min-width:$mobile) {
   display: none;
   }
 
-  @include tablet{
+  @media screen and (min-width:$tablet){
   display: none;
   }
 
-  @include desktop{
-  display: inline;
+  @media screen and (min-width:$desktop) {
+  display: block;
   }
 
-.work__image .container{
-  padding-bottom: 94px;
-  }
+    @extend %only-bottom;
 }
 
 .titles {
-      font-weight: 700;
-      line-height: var(--line-little);
-  letter-spacing: var(--min-spacing);
-  text-align: center;
-  color: var(--prime-text);
-      font-size: 28px;
-        padding: 0 0 30px 0;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 30px 0;
+  letter-spacing: 0.03px;
 
-  @include tablet{
-  padding: 0 0 30px 0;
-    font-size: 28px;
-
-}
-  @include desktop{
-  padding: 94px 0 50px 0;
-
-  font-size: 36px;
+  @media screen and (min-width:$desktop) {
+    font-size: 36px;
+    line-height: calc(42.19px/36px);
   }
 
-  @extend %section;
   @extend %titles;
 }
 
@@ -182,9 +170,7 @@
   justify-content: center;
   gap: 30px;
 
-  @include desktop{
-    margin-bottom: 94px;
-  }
+
 
   .work__item {
   position: relative;
@@ -195,13 +181,13 @@
   position: absolute;
   bottom: 0;
   opacity: 1;
-  @extend %flex;
   width: 370px;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--text-lite);
   font-weight: 700;
   @extend %topography;
+  @extend %flex;
 
   .work__text {
   height: 16px;
@@ -215,101 +201,57 @@
 
 .team-color {
   background-color: var(--backgraund-grey);
-        @extend %retreat;
-
-        @include desktop{
-          padding: 0;
-        }
-
+  @extend %section;
 }
-
-// .team__list .container{
-// display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//   gap:30px;
-//   background-color: var(--backgraund-grey);
-//   padding-bottom: 60px;
-//   @include tablet{
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   }
-
-//   @include desktop{
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   gap: 30px;
-//   padding-bottom: 94px;
-//   }
-// }
 
 .team__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:30px;
-
-  @include tablet{
-    display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  }
+  gap:30px;
 
-  @include desktop{
+  @media screen and (min-width:$tablet){
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 30px;
-  padding-bottom: 94px;
+  flex-wrap: wrap;
   }
 
-      & .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:30px;
-    background-color: var(--backgraund-grey);
-    padding-bottom: 60px;
+  @media screen and (min-width:$desktop) {
+  display: flex;
+  flex-direction: row;
   }
 }
 
 
 
-  .team__item {
+.team__item {
   max-width: 450px;
-// display: flex;
-//     flex-direction: column;
-//     align-items: center;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--text-lite);
   box-shadow: var(--team-shadow);
 
-
-  @include tablet{
+  @media screen and (min-width:$tablet){
   width:354px;
   height:536px;
   } 
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   width:270px;
   height:428px;
   }
-  }
+}
 
 
 .team-img{
   width: 450px;
 
-
-  @include tablet{
+  @media screen and (min-width:$tablet){
   width:354px;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   width:270px;
-
   }
 }
 
@@ -319,30 +261,29 @@
 }
 
 .team__info {
-
   background-color: var(--text-lite);
   padding-bottom: 10px;
   font-weight: 500;
   font-size: var(--biger-size);
-  line-height: var(--line-little);
+  line-height: calc(18.75px/16px);
   text-align: center;
   letter-spacing: var(--min-spacing);
   color: var(--prime-text);
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   width: 270px;
   }
 }
 
 .team__text {
   font-size: var(--biger-size);
-  line-height: var(--line-little);
+  line-height: calc(18.75px/16px);
   letter-spacing: var(--min-spacing);
   background-color: var(--text-lite);
   text-align: center;
   color: var(--text-color);
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   width: 270px;
   }
 }
@@ -356,7 +297,7 @@
 
 .social__item{
   transition: background-color var(--time) var(--timing-function);
-    border-radius: 50%;
+  border-radius: 50%;
 
   &:hover,
   &:focus {
@@ -386,14 +327,13 @@
 
 // /* ..........................client................................... */
 
-.client {
-  @extend %retreat;
+.clients{
+  @extend %section;
+}
 
-  @include desktop{
-  padding:0;
-  margin-bottom: 94px;
-  
-  }
+.client {
+  background-color: var(--text-lite);
+
 }
 .client__list {
   display: flex;
@@ -407,14 +347,14 @@
   justify-content: center;
   width: 210px;
   height: 92px;
-    transition: border var(--time) var(--timing-function);
+  transition: border var(--time) var(--timing-function);
   
   
-  @include tablet{
+  @media screen and (min-width:$tablet){
   width: 226px;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   flex-wrap: wrap;
   width: 170px;
   }
@@ -438,15 +378,13 @@
   width: 210px;
   height: 92px;
 
-  @include tablet{
+  @media screen and (min-width:$tablet){
   width: 226px;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   width: 170px;
   }
-
-
 }
 
 .icons {

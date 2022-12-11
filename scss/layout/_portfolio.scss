@@ -2,41 +2,29 @@ header {
   border-bottom: #ececec 1px solid;
 }
 
+.portfolio-wrap .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.portfolio{
+  @extend %section;
+}
 
-.nav__btn .container{
-  // display: flex;
-  // flex-wrap: nowrap;
-  width: 326px;
-  // gap: 10px;
-  
+.nav__btn{
+  display: flex;
 
-
-  @include mobile{
-    width: 326px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  
-    // width: 484px;
-  }
-
-  @include tablet{
+  @media screen and ($desktop){
   width: 615px;
-  margin-top: 60px;
-  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   }
-
-  @include desktop {
-  width: 615px;
-  margin-top: 100px;
-  margin-bottom: 0;
-  }
-
 }
 
 .nav__list {
   max-width: 350px;
-  // height: 91px;
   display: flex;
   gap: 8px;
   flex-direction: row;
@@ -45,30 +33,27 @@ header {
   margin-bottom: 40px;
   margin-right: auto;
 
-  @include mobile{
-      max-width: 350px;
+  @media screen and (min-width:$mobile){
+  max-width: 350px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-    justify-content: flex-start;
+  justify-content: flex-start;
   margin-bottom: 40px;
-  // margin: 0 auto;
   }
 
-  @include tablet{
-    max-width: 615px;
-    height: 40px;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
+  @media screen and (min-width:$tablet){
+  max-width: 615px;
+  height: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   width: 615px;
-    height: 40px;
-    // flex-wrap: nowrap;
+  height: 40px;
   }
-
 }
 
 .title-non {
@@ -76,11 +61,10 @@ header {
 }
 
 .nav__item {
-  // width: 100%;
-  // margin-right: 8px;
   border-radius: 4px;
-  @include mobile{
-    margin-bottom: 7px;
+
+  @media screen and (min-width:$mobile){
+  margin-bottom: 7px;
   }
 }
 
@@ -117,53 +101,31 @@ header {
 
 /*                     cards                    */
 
-.portfolio-wrap{
+.examples {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @extend %only-top-mob;
 }
 
-.portfolio .container {
-  display: flex;
-
-
-  @include tablet{
-      margin-top: 30px;
-  }
-
-  @include desktop{
-  margin-top: 50px;
-  }
-}
-
-.portfolio__list {
+.examples__list {
   display: flex;
   flex-direction: column ;
   align-items: center;
   gap: 30px;
-  margin-bottom: 60px;
 
-  @include tablet{
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
+  @media screen and (min-width:$tablet){
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-    margin-bottom: 94px;
   }
 }
 
-.portfolio__item {
-  // width: 450px;
+.examples__item {
   height: 404px;
   border: 1px solid #eeeeee;
   gap: 30px;
@@ -176,60 +138,57 @@ header {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
-  @include tablet{
+  @media screen and (min-width:$tablet){
   width: 354px;
   height: 440px;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   width: 370px;
   height: 404px;
   }
 }
 
-.portfolio__item:last-of-type{
+.examples__item:last-of-type{
   display: none;
-    border: none;
-    box-shadow: none;
-  @include tablet{
-    display: inline;
+  border: none;
+  box-shadow: none;
+
+  @media screen and (min-width:$tablet){
+  display: inline;
   }
 
-    @include desktop{
+  @media screen and (min-width:$desktop){
   display: none;
-    }
+  }
 }
-
 
 /* overlay */
 
-.portfolio__link {
+.examples__link {
   position: relative;
   overflow: hidden;
   display: block;
   transition: var(--time) var(--timing-function);
-  
-  .portfolio__item:hover &::before {
+
+  .examples__item:hover &::before {
   content: "";
   transform: translateY(-100%);
   transition: transform var(--time) var(--timing-function);
   }
-
-
-
 }
 
 .portfolio-img{
-width: 450px;
-height: 294px;
+  width: 450px;
+  height: 294px;
 
-@include tablet{
+  @media screen and (min-width:$tablet){
   width: 354px;
-}
+  }
 
-@include desktop{
+  @media screen and (min-width:$desktop){
   width: 370px;
-}
+  }
 }
 
 .overlay__text {
@@ -257,7 +216,7 @@ height: 294px;
   opacity: 0;
   }
 
-  .portfolio__item:hover & {
+  .examples__item:hover & {
   opacity: 0.9;
   transform: translateY(-100%);
   transition: transform var(--time) var(--timing-function);

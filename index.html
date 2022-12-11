@@ -23,7 +23,7 @@
   <body>
     <!-- header -->
     <header>
-      <div class="header container ">
+      <div class="header container">
         <a class="logo__link" href="./index.html">
           <span class="logo__text logo"lang="en">Web</span>
           <span class="logo__text " lang="en">Studio</span>
@@ -93,6 +93,7 @@
             </div>
           </div>
         </div>
+
 <!-- mob nav -->
       <div class="tab-desk-menu">
         <nav class="navigation ">
@@ -127,20 +128,22 @@
           </li>
         </ul>
       </div>
-
     </header>
     
     <main>
       <!-- секція hero -->
       <section class=" hero">
-        <div class="hero__img">
+        <div class="hero__img container">
           <h1 class="hero__title">
             Ефективні рішення для
             вашого бізнесу
           </h1>
+          <button class="hero__button" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
+
           <!-- modal  -->
-          <button class="hero__button" type="button" data-modal-open>Замовити послугу</button>
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
               <div class="modal__close-button" data-modal-close>
@@ -181,33 +184,32 @@
                     name="comments" id="coments" class="modal__input comments" placeholder="Введіть текст"></textarea>
                   <input type="checkbox" class="modal__check-input visually-hidden " 
                     name="accept" value="true" id="acept" placeholder=""/>
-
                   <label for="acept" class="modal__accept">
-                    <span>
-                      <svg class="icon icon-Vectorcheck" width="16px" height="15px">
+                    <div class="accept-span">
+                      <svg class="icon icon-Vectorcheck" width="1px">
                         <use href="./images/icons.svg#icon-Vectorcheck"></use>
                       </svg>
-
+                    </div>
+                    <div class="accept">
                       <p class="accept-text">
                         Погоджуюся з розсилкою та приймаю
                       </p>
                       <a class="acept-contract" href="#">
                         Умови договору
                       </a>
-                    </span>
+                    </div>
                   </label>
-                  <button type="submit" class="modal__button">
+                  <button type="submit" class="modal__button" data-modal-close>
                     Відправити
                   </button>
               </form>
             </div>
           </div>
-
       </section>
 
-      <section>
-        <div class="about">
-          <ul class="about__list container">
+      <section class="about">
+        <div class="about__wrap container">
+          <ul class="about__list ">
             <li class="about__item">
               <div class="about__img img-antenna">
                 <svg class="about__icon icon-antenna-1" width="70px">
@@ -339,8 +341,8 @@
         </div>
       </section>
       <!-- команда -->
-      <section class="team-color">
-        <div class="team container">
+      <section class="team-color ">
+        <div class="team container ">
             <h2 class="titles">Наша команда</h2>
             <ul class="team__list">
               <li class="team__item">
@@ -475,6 +477,7 @@
                 <picture>
                   <source
                     srcset="./images/teamimg3.jpg 1x,
+
                       ./images/x2/mob/imgteam3mobx2-min.jpg 2x"
                     media="(max-width:767px)"
                     type="image/webp"
@@ -602,11 +605,11 @@
       </div>
       </section>
 
-      <section>
+      <section class="clients" >
         <div class="client container">
-          <p class="titles">
+          <h2 class="titles">
             Постійні клієнти
-          </p>
+          </h2>
           <ul class="client__list">
             <li class="client__item">
               <a href="" class="client__link icons">
@@ -663,67 +666,69 @@
     <!-- footer -->
     <footer>
       <div class="footer container">
-        <div class="footer__info">
-          <a class="logo__link" href="./index.html">
-            <span class="logo__text logo" lang="en">Web</span>
-            <span class="logo__text logo-color" lang="en">Studio</span>
-          </a>
-          <address class="footer__address">
-            <ul class="footer__list address-list">
-              <li class="footer__item address-item">м. Київ, пр-т Лесі Українки, 26</li>
-              <li class="footer__item">
-                <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+        <div class="footer__wrap">
+          <div class="footer__info">
+            <a class="logo__link" href="./index.html">
+              <span class="logo__text logo" lang="en">Web</span>
+              <span class="logo__text logo-color" lang="en">Studio</span>
+            </a>
+            <address class="footer__address">
+              <ul class="footer__list address-list">
+                <li class="footer__item address-item">м. Київ, пр-т Лесі Українки, 26</li>
+                <li class="footer__item">
+                  <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link" href="tel:+380991111111"> +38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class=" footer__social">
+            <p class="footer__title">Приєднуйтесь</p>
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a href="https://www.instagram.com" class="social__link footer-soc">
+                  <svg  class="icon icon-instagramOPt" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-instagramOPt" ></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="tel:+380991111111"> +38 099 111 11 11</a>
+              <li class="footer__social-item">
+                <a href="https://twitter.com/home" class="social__link footer-soc">
+                  <svg class="icon icon-twitter" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a href="https://www.facebook.com" class="social__link footer-soc">
+                  <svg class="icon icon-facebook"  width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+              <a href="https://www.linkedin.com" class="social__link footer-soc">
+                <svg class="icon icon-linkedin"  width="20px" height="20px">
+                  <use href="./images/icons.svg#icon-linkedin" ></use>
+                </svg>
+              </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class=" footer__social">
-          <p class="footer__title">Приєднуйтесь</p>
-          <ul class="footer__social-list">
-            <li class="footer__social-item">
-              <a href="https://www.instagram.com" class="social__link footer-soc">
-                <svg  class="icon icon-instagramOPt" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-instagramOPt" ></use>
+          </div>
+          <div class="register">
+            <p class="footer__title">Підпишіться на розсилку</p>
+            <div class="register__wrap">
+              <input type="text" class="register__form" name="mail" id="mail" placeholder="E-mail"/>
+              <div class="button_wrap">
+                <button type="submit" class="register__button hero__button">
+                  Підписатися
+                </button>
+                <svg class="register__icon" width="24" height="24px">
+                  <use href="./images/icons.svg#icon-send"></use>
                 </svg>
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a href="https://twitter.com/home" class="social__link footer-soc">
-                <svg class="icon icon-twitter" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a href="https://www.facebook.com" class="social__link footer-soc">
-                <svg class="icon icon-facebook"  width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer__social-item">
-            <a href="https://www.linkedin.com" class="social__link footer-soc">
-              <svg class="icon icon-linkedin"  width="20px" height="20px">
-                <use href="./images/icons.svg#icon-linkedin" ></use>
-              </svg>
-            </a>
-            </li>
-          </ul>
-        </div>
-        <div class="register">
-          <p class="footer__title">Підпишіться на розсилку</p>
-          <div class="register__wrap">
-            <input type="text" class="register__form" name="mail" id="mail" placeholder="E-mail"/>
-            <div class="button_wrap">
-              <button type="submit" class="register__button hero__button">
-                Підписатися
-              </button>
-              <svg class="register__icon" width="24" height="24px">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
+              </div>
             </div>
           </div>
         </div>

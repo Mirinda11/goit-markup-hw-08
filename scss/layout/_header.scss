@@ -1,26 +1,20 @@
 
-
-.header .container {
-  height: 80px;
-
-}
-
-.header{
+.header.container{
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 60px;
 
-  @include tablet{
-    height: 80px;
+  @media screen and (min-width:$tablet){
+  height: 80px;
   }
 
-  @include desktop{
-      height: 80px;
+  @media screen and (min-width:$desktop){
+  height: 80px;
   }
 }
 
-.logo__link  {
+.logo__link {
   display: flex;
 }
 
@@ -39,13 +33,13 @@
 }
 
 .menu{
-margin-left: auto;
+  margin-left: auto;
 
-  @include tablet{
+  @media screen and (min-width:$tablet){
   display: none;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   display: none;
   }
 }
@@ -109,16 +103,15 @@ margin-left: auto;
 
 
 .menu__navigation__item{
-    padding-bottom: 36px;
-    color: var(--prime-text);
-
+  padding-bottom: 36px;
+  color: var(--prime-text);
 }
 
 .menu__navigation__item:not(:last-child)::after{
   content: ' ';
   height: 22px;
   border-right: 1px solid #212121 20% ;
-  }
+}
 
 
 .menu__navigation__link{
@@ -134,18 +127,13 @@ margin-left: auto;
   }
 }
 
-// .menu__navigation__link
-
-
 .menu__contact{
   display: flex;
   flex-direction: column-reverse;
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   flex-direction: row;
   }
-
-
 }
 
 .menu__contact__link{
@@ -156,12 +144,12 @@ margin-left: auto;
   color: var(--logo-color);
   padding-bottom: 32px;
   
-  @include tablet{
-    display: none;
-    }
-  @include desktop{
-    display: none;
-    }
+  @media screen and (min-width:$tablet){
+  display: none;
+  }
+  @media screen and (min-width:$desktop){
+  display: none;
+  }
 }
 
 .mail{
@@ -180,7 +168,6 @@ margin-left: auto;
   letter-spacing: 0.02em;
   color: var(--logo-color);
   margin-bottom: 48px;
-
 }
 
 
@@ -202,7 +189,6 @@ margin-left: auto;
   background-color:rgba(33, 33, 33, 0.2);
 }
 
-
 .menu__soc-link {
   font-weight: 500;
   color: var(--logo-color);
@@ -211,41 +197,42 @@ margin-left: auto;
 
 //                                tab-desktop menu
 
-
 .tab-desk-menu{
   display: none;
 
-  @include tablet{
+  @media screen and (min-width:$tablet){
   display: flex;
-  margin-left: 88px;
+  margin-left: auto;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   display: flex;
-  margin-left: 93px;
+  margin-left: auto;
   }
 }
 
 .navigation {
+  display: flex;
 
-  @include tablet{
-    display: flex;
-    justify-content: space-around;
+  @media screen and (min-width:$tablet){
+  display: flex;
+  justify-content: space-around;
   }
 
-  @include desktop{
-    display: flex;
-    gap: 50px;
+  @media screen and (min-width:$desktop){
+  display: flex;
+  gap: 50px;
   }
 
 }
 
 .navigation__list {
-width: 100%;
-    @include tablet{
+  width: 100%;
+
+  @media screen and (min-width:$tablet){
   display: flex;
   align-items: center;
-      gap: 50px;
+  gap: 50px;
   }
 }
 
@@ -254,7 +241,6 @@ width: 100%;
 }
 
 .navigation__link {
-    @include tablet{
   position: relative;
   font-family: inherit;
   font-weight: 500;
@@ -262,16 +248,7 @@ width: 100%;
   line-height: 1.2;
   color: var(--primary-color);
   transition: color var(--time) var(--timing-function);
-  }
-      @include desktop{
-  position: relative;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: var(--size-repeat);
-  line-height: 1.2;
-  color: var(--primary-color);
-  transition: color var(--time) var(--timing-function);
-  }
+
   &::after {
   content: "";
   position: absolute;
@@ -285,7 +262,6 @@ width: 100%;
   opacity: 0;
   transition: opacity var(--time) var(--timing-function),
   background-color var(--time) var(--timing-function);
-
   }
 
   &:hover::after {
@@ -297,7 +273,6 @@ width: 100%;
   &:focus {
   color: var(--logo-color);
   }
-
 }
 
 .logo {
@@ -310,65 +285,46 @@ width: 100%;
 
 /* contact */
 
-
-
 .contact {
+  display: flex;
+  font-weight: 500;
+  font-size: var(--size-repeat);
+  line-height: var(--line-little);
 
-  @include tablet{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-weight: 500;
-    font-size: var(--size-repeat);
-    line-height: var(--line-little);
-            margin-left: 96px;
+  @media screen and (min-width:$tablet){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: var(--size-repeat);
+  line-height: var(--line-little);
+  margin-left: 96px;
   }
 
-  @include desktop{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    font-weight: 500;
-    font-size: var(--size-repeat);
-    line-height: var(--line-little);
-        margin-left: 300px;
+  @media screen and (min-width:$desktop){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 300px;
   }
 }
-
 
 .contact__link {
+  display: flex;
+  font-weight: 500;
+    font-size: var(--size-repeat);
+  line-height: var(--line-little);
+  color: var(--text-color);
+  transition: color var(--time) var(--timing-function);
 
-    @include tablet{
-      display: flex;
-      font-weight: 500;
-      font-size: var(--size-repeat);
-      line-height: var(--line-little);
-      color: var(--text-color);
-      transition: color var(--time) var(--timing-function);
-    }
-        @include desktop{
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          font-weight: 500;
-          font-size: var(--size-repeat);
-          line-height: var(--line-little);
-          color: var(--text-color);
-          transition: color var(--time) var(--timing-function);
-        }
+  @media screen and (min-width:$tablet){
+  display: flex;
+  }
 
-          &:hover,
-          &:focus {
-          fill: var(--logo-color);
-          color: var(--logo-color);
-          }
-}
-
-.contact__item{
-
-    @include desktop{
-    // margin-bottom: 10px;
+  @media screen and (min-width:$desktop){
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   }
 
   &:hover,
@@ -378,20 +334,28 @@ width: 100%;
   }
 }
 
+.contact__item:hover,
+.contact__item:focus {
+  fill: var(--logo-color);
+  color: var(--logo-color);
+}
+
 .mail {
-    margin-bottom: 10px;
-      @include desktop{
+  margin-bottom: 10px;
+
+  @media screen and (min-width:$desktop){
   margin:0 30px 0 0;
   }
 }
 
 
 .contact__icon {
+  fill: currentColor;
 
-      @include tablet{
+  @media screen and (min-width:$tablet){
   fill: currentColor;
   margin-right: 10px;
-}
+  }
 }
 
 

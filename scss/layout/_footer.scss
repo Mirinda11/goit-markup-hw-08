@@ -1,29 +1,23 @@
-footer {
-
-  width: auto;
-  background-color: var(--background-text-dark);
-  padding-top: 60px;
-  padding-bottom: 60px;
-  
+footer{
+  @extend %section-footer;
 }
 
-.footer{
+.footer__wrap {
   display: flex;
   flex-direction: column;
+  gap: 60px;
 
-
-
-  @include tablet{
-          display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
+  @media screen and (min-width:$tablet){
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
   }
 
-  @include desktop{
-      display: flex;
-      flex-wrap: nowrap;
+  @media screen and (min-width:$desktop){
+  display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   align-items: baseline;
   }
@@ -36,14 +30,13 @@ footer {
   flex-direction: column;
   align-items: center;
 
-  @include tablet{
+  @media screen and (min-width:$tablet){
   width: auto;
-  margin-bottom: 60px;
   }
 
-  @include desktop{
-    align-items: flex-start;
-    margin: 0;
+  @media screen and (min-width:$desktop){
+  align-items: flex-start;
+  margin: 0;
   }
 }
 
@@ -59,10 +52,9 @@ footer {
 .footer__address {
   color: var(--text-lite) 60%;
   font-family: var(--file-font);
-  font-weight: normal;
   font-style: normal;
   font-size: var(--size-repeat);
-  line-height: 1.7;
+  line-height: calc(24px/14px);
   letter-spacing: var(--min-spacing);
 }
 
@@ -74,10 +66,9 @@ footer {
   text-align: center;
   margin-bottom: 9px;
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   text-align: left;
   }
-
 }
 
 .footer__link {
@@ -96,20 +87,17 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  @extend %retreat;
   
-  @include tablet{
+  @media screen and (min-width:$tablet) {
   width: auto;
   padding: 0;
-  margin-bottom: 60px;
-}
+  }
 
-  @include desktop{
-  margin-left: 66px;
-  margin-right: 88px;
-    justify-content: flex-start;
+  @media screen and (min-width:$desktop){
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-start;
   align-items: baseline;
-
   }
 }
 
@@ -118,19 +106,18 @@ footer {
   color: var(--text-lite);
   font-weight: 700;
   font-size: var(--size-repeat);
-  line-height: var(--line-little);
+  line-height: calc(24px/14px);
   letter-spacing: var(--min-spacing);
   text-align: center;
 
-  @include desktop{
-  width: 100%;
+  @media screen and (min-width:$desktop){
+  width: auto;
   text-align:start;
   }
 }
 
-.footer__social-list {
+.footer__social-list{
   display: flex;
-
 }
 
 .footer__social-item{
@@ -151,38 +138,42 @@ footer {
   }
 }
 
-// social
+// register///////////////////////////////
 
 .register {
   width: 100%;
+  max-width: 570px;
   display: flex;
   flex-direction: column;
 
-  @include desktop{
-  width: auto;
-  flex-direction: column;
+  @media screen and (min-width: $desktop){
+  width: 100%;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
   }
 }
 
-  .register__wrap {
+.register__wrap {
+  width: 100%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  @include desktop{
+  @media screen and (min-width: $desktop){
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: flex-start
   }
-  }
-
+}
 
 .register__form {
-  width: 70%;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -191,7 +182,6 @@ footer {
   cursor: pointer;
   outline: none;
   padding-left: 16px;
-  margin-right: 12px;
   transition: outline-color var(--time) var(--timing-function);
 
   &::placeholder {
@@ -202,16 +192,18 @@ footer {
   border-color: var(--logo-color);
   }
 
-  @include mobile{
-  width: 450px;
+  @media screen and (min-width:$mobile) {
+  width: 100%;
+  max-width: 450px;
   }
 
-  @include tablet{
-  width: 450px;
+  @media screen and (min-width:$tablet){
+  max-width: 450px;
   }
 
-  @include desktop{
-  width: 358px;
+  @media screen and (min-width:$desktop){
+  max-width: 358px;
+  margin-right: 12px;
   }
 }
 
@@ -223,31 +215,32 @@ footer {
   margin-top: 20px;
   padding-right: 15px;
 
-  @include mobile{
-      margin-left: 12px;
+  @media screen and (min-width:$mobile){
+  margin-left: 12px;
   }
 
-
-  @include desktop{
-   margin: 0;
-   padding: 0;
+  @media screen and (min-width:$desktop){
+  margin: 0;
+  padding: 0;
   }
 }
 
 .register__icon {
   position: absolute;
-
   bottom: 13px;
   right: 24px;
 
-  @include tablet{
+  @media screen and (min-width:$tablet){
   top: 34px;
   right: 28px;
   }
 
-  @include desktop{
+  @media screen and (min-width:$desktop){
   top: 13px;
   right: 18px;
   }
 }
 
+footer {
+  background-color: var(--background-text-dark);
+}

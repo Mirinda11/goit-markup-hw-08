@@ -1,11 +1,13 @@
 @import './utils/normalize';
 @import './utils/vars';
 @import './utils/reset';
+@import './utils/placeholders';
 @import './base/mixins';
 @import './base/container';
 @import './base/is-hidden';
 @import './layout/header';
 @import './layout/hero';
+@import './layout/modal';
 @import './layout/section';
 @import './layout/footer';
 @import './layout/portfolio';
