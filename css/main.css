@@ -925,6 +925,20 @@ footer {
 
 .hero {
   max-width: 1600px;
+  max-width: 1600px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background-image: var(--gradient), url(../images/Img-min.jpg);
+  background-color: var(--background-text-dark);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: var(--gradient), url(../images/x2/Headerimgmobx2-min.jpg);
+  }
 }
 
 @media screen and (min-width: 480px) {

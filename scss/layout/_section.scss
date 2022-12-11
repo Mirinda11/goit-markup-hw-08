@@ -148,7 +148,7 @@
   display: block;
   }
 
-    @extend %only-bottom;
+  @extend %only-bottom;
 }
 
 .titles {
@@ -158,8 +158,8 @@
   letter-spacing: 0.03px;
 
   @media screen and (min-width:$desktop) {
-    font-size: 36px;
-    line-height: calc(42.19px/36px);
+  font-size: 36px;
+  line-height: calc(42.19px/36px);
   }
 
   @extend %titles;
@@ -169,8 +169,6 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-
-
 
   .work__item {
   position: relative;
@@ -323,8 +321,6 @@
   // background-color: var(--logo-color);
   // border-radius: 50%;
   }
-
-
 // /* ..........................client................................... */
 
 .clients{
@@ -342,13 +338,12 @@
   gap: 30px;
 }
 
-  .client__item {
+.client__item {
   display: flex;
   justify-content: center;
   width: 210px;
   height: 92px;
   transition: border var(--time) var(--timing-function);
-  
   
   @media screen and (min-width:$tablet){
   width: 226px;
